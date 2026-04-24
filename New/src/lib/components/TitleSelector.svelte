@@ -22,6 +22,8 @@
   }
   select {
     font-size: 18px;
-    padding: 4px 6px;
+    padding: 8px 10px;
+    border-radius: 4px;
+    width: 100%;
   }
 </style>

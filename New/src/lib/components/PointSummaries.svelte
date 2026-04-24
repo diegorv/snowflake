@@ -44,4 +44,18 @@
     font-weight: 600;
     margin-top: 4px;
   }
+  @media (max-width: 480px) {
+    .summary {
+      gap: 6px;
+    }
+    .cell {
+      padding: 8px 6px;
+    }
+    .value {
+      font-size: 22px;
+    }
+    .label {
+      font-size: 11px;
+    }
+  }
 </style>

@@ -34,10 +34,14 @@
   .selector {
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: minmax(60px, 1fr);
+    grid-auto-columns: minmax(72px, 1fr);
     gap: 4px;
-    margin: 24px 0;
+    margin: 20px 0;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+    scroll-padding: 8px;
+    padding-bottom: 4px;
   }
   .cell {
     border: 2px solid #ccc;
@@ -49,6 +53,8 @@
     flex-direction: column;
     gap: 4px;
     text-align: center;
+    scroll-snap-align: start;
+    min-height: 72px;
   }
   .cell.focused {
     border-width: 3px;
@@ -61,7 +67,8 @@
   .level {
     font-weight: 700;
     color: #fff;
-    padding: 4px 0;
+    padding: 6px 0;
     border-radius: 2px;
+    font-size: 16px;
   }
 </style>

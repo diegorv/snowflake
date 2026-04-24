@@ -17,8 +17,14 @@
   }
   input {
     font-size: 24px;
-    padding: 4px 6px;
+    padding: 8px 10px;
     border: 1px solid #ccc;
-    border-radius: 2px;
+    border-radius: 4px;
+    width: 100%;
+  }
+  @media (max-width: 480px) {
+    input {
+      font-size: 20px;
+    }
   }
 </style>

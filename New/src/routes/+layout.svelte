@@ -29,4 +29,9 @@
   header {
     margin-bottom: 16px;
   }
+  @media (max-width: 480px) {
+    .chrome {
+      padding: 16px 12px 48px;
+    }
+  }
 </style>

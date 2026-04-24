@@ -76,12 +76,13 @@
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
-    gap: 4px;
+    gap: 6px;
     margin-bottom: 16px;
+    flex-wrap: wrap;
   }
   .level {
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     border: 2px solid #ccc;
     border-radius: 4px;
     font-size: 18px;

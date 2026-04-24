@@ -111,7 +111,7 @@
 </script>
 
 {#if $currentFramework}
-  <svg viewBox={`0 0 ${SIZE} ${SIZE}`} width={SIZE} height={SIZE} class="chart" aria-label="Nightingale radar">
+  <svg viewBox={`0 0 ${SIZE} ${SIZE}`} class="chart" aria-label="Nightingale radar" preserveAspectRatio="xMidYMid meet">
     <g transform={`translate(${CENTER},${CENTER}) rotate(${rotationOffset})`}>
       {#each centerSlices as slice (slice.key)}
         <path
@@ -148,6 +148,10 @@
 <style>
   .chart {
     display: block;
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    margin: 0 auto;
   }
   path {
     cursor: pointer;

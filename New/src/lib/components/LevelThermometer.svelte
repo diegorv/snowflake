@@ -42,7 +42,7 @@
     : [];
 </script>
 
-<svg viewBox={`0 0 ${WIDTH + 40} ${HEIGHT + 60}`} width="100%" role="img" aria-label="Level thermometer">
+<svg viewBox={`0 0 ${WIDTH + 40} ${HEIGHT + 60}`} width="100%" class="bar" role="img" aria-label="Level thermometer" preserveAspectRatio="xMidYMid meet">
   <g transform="translate(20, 28)">
     <rect x="0" y="0" width={WIDTH} height={HEIGHT} fill="#f1f1f1" rx="4" ry="4" />
     {#each segments as seg (seg.categoryId)}
@@ -59,6 +59,10 @@
 </svg>
 
 <style>
+  .bar {
+    display: block;
+    height: auto;
+  }
   text {
     font-size: 10px;
     fill: #333;

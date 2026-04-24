@@ -101,7 +101,7 @@
   }
   .layout {
     display: grid;
-    grid-template-columns: 1fr 420px;
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 420px);
     gap: 24px;
     align-items: start;
   }
@@ -109,6 +109,10 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
+    min-width: 0;
+  }
+  .right {
+    min-width: 0;
   }
   .error {
     background: #fff3f3;
@@ -124,7 +128,8 @@
 
   @media (max-width: 800px) {
     .layout {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 16px;
     }
   }
 </style>
