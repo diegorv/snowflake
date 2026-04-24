@@ -2,6 +2,10 @@
   { "id": "medium", "label": "Medium (legacy)", "path": "/frameworks/medium.json" },
   { "id": "example-small", "label": "Example (small)", "path": "/frameworks/example-small.json" },
   { "id": "basecamp", "label": "Basecamp", "path": "/frameworks/basecamp.json" },
+  { "id": "capgemini", "label": "Capgemini UK", "path": "/frameworks/capgemini.json" },
+  { "id": "dropbox-swe", "label": "Dropbox (Software Engineer)", "path": "/frameworks/dropbox-swe.json" },
   { "id": "envoy", "label": "Envoy", "path": "/frameworks/envoy.json" },
-  { "id": "financial-times", "label": "Financial Times", "path": "/frameworks/financial-times.json" }
+  { "id": "etsy", "label": "Etsy", "path": "/frameworks/etsy.json" },
+  { "id": "financial-times", "label": "Financial Times", "path": "/frameworks/financial-times.json" },
+  { "id": "infracloud", "label": "InfraCloud", "path": "/frameworks/infracloud.json" }
 ]

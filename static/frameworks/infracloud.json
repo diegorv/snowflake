@@ -1,0 +1,399 @@
+{
+  "id": "infracloud",
+  "displayName": "InfraCloud",
+  "categories": [
+    {
+      "id": "craft",
+      "label": "Core Craft",
+      "color": "#00abc2"
+    },
+    {
+      "id": "ops",
+      "label": "Operations & Behaviors",
+      "color": "#428af6"
+    },
+    {
+      "id": "people",
+      "label": "People & Community",
+      "color": "#e1439f"
+    }
+  ],
+  "tracks": [
+    {
+      "id": "CORE",
+      "displayName": "Core Competencies",
+      "categoryId": "craft",
+      "description": "Core Competencies across InfraCloud's engineering career ladder.",
+      "milestones": [
+        {
+          "summary": "Associate Engineer — You are able to work on tasks which are allocated to you usually by a lead from the InfraCloud team or a customer team. ",
+          "signals": [
+            "You are able to work on tasks which are allocated to you usually by a lead from the InfraCloud team or a customer team. You care about the quality of work you do and have attention to every detail.",
+            "If you get blocked on something - you seek help. You try to solve an issue using all usual means of help such as documentation, Stack Overflow and others but if you are not able to solve something within 30-40 minutes, you seek help.",
+            "You know how to use documentation effectively in the context of a technology that you already know or are learning new. You understand that while point solutions on Stack Overflow or other places are sometimes good to find quick solutions. But you care about understanding how things work and reading corresponding pages in documentation to understand the thing that you solved.",
+            "You are open to being vulnerable to the fact that you may not know everything - and asking a question does not make you feel less knowledgeable.",
+            "You communicate in clear language - to customers, internal team members and the lead(s).",
+            "You frame the context of an issue you are facing clearly so that others can help you, instead of asking generic questions without the context that a person who wants to help would need."
+          ],
+          "examples": []
+        },
+        {
+          "summary": "Engineer — You can own and execute tasks independently and debug easy-medium problems fairly independently.",
+          "signals": [
+            "You can own and execute tasks independently and debug easy-medium problems fairly independently.",
+            "You also tackle hard problems on your own and try to get some early hints and then as needed seek help from a senior engineer from your team or from your larger engineering organization/other teams etc.",
+            "Conversely, you are also willing to extend help to other engineers in debugging/solving an issue in an area that you may have worked on in the past.",
+            "You own small features/areas of a system entirely and gain mastery and depth in those areas. You are the person to go to for solving issues in that small sub-system/feature set that you own.",
+            "You are learning to do code review and trying to get proficient at it while learning to be respectful, thoughtful, and not being too pedantic.",
+            "You are continuously scanning the code/systems that you work with to identify areas that can be improved. You are learning to do this better and when you find something worth improving, you talk to the team and customer and try to take it to a logical conclusion.",
+            "For every work item you finish/work on in a given day/week, you also spend time understanding the larger context around that work area and the technology used.",
+            "You understand that most problems in our technology space are multi-disciplinary and involve multiple layers of the stack. Whenever possible you work ahead of the tasks to identify and read/learn about those areas and be prepared with your plan of action.",
+            "You work towards building a broad understanding of a few areas and trying to build a deeper understanding of 1-3 areas (broad is the horizontal bar & depth is the vertical bar in the T-shaped skills)."
+          ],
+          "examples": []
+        },
+        {
+          "summary": "Senior Engineer — You own tasks independently and can execute and debug medium and hard problems fairly independently.",
+          "signals": [
+            "You own tasks independently and can execute and debug medium and hard problems fairly independently.",
+            "You are able to design modules/parts of a solution independently and review them as needed by a Staff/Principal engineer from your team or from another team by providing sufficient context.",
+            "You own large enough features/areas of a system entirely and gain mastery and depth in those areas. You are the person to go to for solving issues in that subsystem/feature set that you own.",
+            "You are pretty good at code/system design reviews of engineers who are still learning this while you are respectful, thoughtful, and not being too pedantic. You approach anyone who is learning this with empathy and provide them with guidance and pointers to get better at code reviews when they start out.",
+            "You are aware of top areas which can be improved in terms of code quality/system design/configuration design etc. and work constantly to improve them. Sometimes you need to make a case of such improvements to customers and teams you interact with and you follow a methodist approach to do this.",
+            "For every work item you finish/work on in a given day/week, you also spend time to understand the architecture of the system as a whole and understand them to a good degree.",
+            "You understand that most problems in our technology space are multi-disciplinary and involve multiple layers of the stack. You enable your teams to work ahead of the tasks to identify and read/learn about those areas and be prepared with a plan of action.",
+            "You have a broad understanding of more than a handful of areas and have a deep understanding of 3+ areas (broad is the horizontal bar & depth is the vertical bar in the T-shaped skills). Your goal is to achieve mastery in 3+ areas and continue to increase the breadth of your understanding by learning new areas closest to your work.",
+            "You have a fairly good understanding of areas you are excellent, good and average at and are working to improve on the good and average areas. This is something you regularly discuss with your mentor who is experienced and has been there and done that.",
+            "Clear communicator: Know your audience before you communicate. An update presented at an executive level on a task will be differently worded than to a colleague or your peer. The reason is that context matters. Getting into technical details with the person who does not work with you on a daily basis will most likely be boring or will not get you the necessary eyeballs needed on it."
+          ],
+          "examples": []
+        },
+        {
+          "summary": "Staff Engineer — Your primary role as a staff engineer is to enable more engineers, senior engineers etc. - with design, reducing risk, a",
+          "signals": [
+            "Your primary role as a staff engineer is to enable more engineers, senior engineers etc. - with design, reducing risk, architecture and planning ahead from your experience. While you are hands-on - you are doing it only in areas which are supercritical and no one else on the team can do without your help.",
+            "You can own the design of the entire application/infrastructure stack and break it down into smaller chunks so that you along with the team can deliver it. You are pretty good at estimating the efforts and planning any risks ahead of time.",
+            "You are comfortable with technical problems that are unknown/new in nature and you can work with principal engineers in the organization to define problems, zero down on the solutions from multiple solutions and then work to implement those problems.",
+            "You work across teams of customer/internal teams to navigate and align and agree on objectives and work through details to ensure the completion of projects.",
+            "You keep the team moving quickly by working on engineering efforts that aren’t glamorous.",
+            "You proactively communicate issues and address necessary trade-offs and take ownership of issues.",
+            "You dedicate time to keep your knife sharp i.e. you work constantly and consistently to keep your technical chops sharp through a combination of reading, experimenting, and working with other colleagues."
+          ],
+          "examples": []
+        },
+        {
+          "summary": "Principal Engineer — As a principal engineer, you can own the entire lifecycle from customer to delivery. This involves many phases and we wi",
+          "signals": [
+            "As a principal engineer, you can own the entire lifecycle from customer to delivery. This involves many phases and we will discuss it in subsequent points. But one key metric is within a few iterations of initially working with a team - you can leave the team in such a state that it is auto-functioning and set up for success. *These iterations could be a few weeks or months - depending on the size of the transformation/work etc.*",
+            "You can be in front of the customer, present our point of view & offerings, understand the customer’s problems/ask and translate that into technology, team requirements, and a plan. Many times you will be faced with new technologies in the customer’s context, you can work your way through those by learning, doing quick POCs, and then arriving at requirements.",
+            "You can bootstrap a new team working closely with customers. This involves choosing the right combination of engineers on the team and setting early processes and pipelines and cadence. You also work on early design and architecture and divide those among the members of your team.",
+            "You get other team members involved for consultation or a small help as needed based on expertise, and experience and bring knowledge from outside that may or may not exist with you or the team."
+          ],
+          "examples": []
+        }
+      ]
+    },
+    {
+      "id": "MANAGEMENT",
+      "displayName": "Management",
+      "categoryId": "ops",
+      "description": "Management across InfraCloud's engineering career ladder.",
+      "milestones": [
+        {
+          "summary": "Associate Engineer — You listen carefully to understand the task/request being made and if some parts are not clear, you ask questions and ge",
+          "signals": [
+            "You listen carefully to understand the task/request being made and if some parts are not clear, you ask questions and get clarity on the task.",
+            "If your task is getting delayed due to technical difficulties or debugging taking time etc., you communicate frequently and clearly to customers and lead as appropriate."
+          ],
+          "examples": []
+        },
+        {
+          "summary": "Engineer — You are able to interact with customers and team members independently in a clear and articulate manner.",
+          "signals": [
+            "You are able to interact with customers and team members independently in a clear and articulate manner.",
+            "You can derive rough estimates of a task with some variation in accuracy and are working on improving it. You understand to a decent degree tasks which need some buffer and tasks which are clearly on a risk-free path.",
+            "You work to understand not just the task at hand but also what the user/customer is trying to achieve and ensure that underlying value is delivered, not just the task.",
+            "You are able to understand priorities between multiple tasks and actively communicate to stakeholders if there is any change needed or any delays that happen."
+          ],
+          "examples": []
+        },
+        {
+          "summary": "Senior Engineer — You can be a single point of contact from the customer's point of view for a team of a few engineers and can own their d",
+          "signals": [
+            "You can be a single point of contact from the customer's point of view for a team of a few engineers and can own their delivery. When you own the delivery of a small team, you are aware that you are not the one doing everything but enabling others to be successful on their own.",
+            "You are clear with estimates of complex tasks and are learning to estimate modules etc. with a fair degree of accuracy.",
+            "You are able to understand priorities between modules and team members and their tasks.",
+            "You are able to make a case for a specific feature/technical debt item in front of stakeholders including customer teams."
+          ],
+          "examples": []
+        },
+        {
+          "summary": "Staff Engineer — You are learning to take decisions for your team and customers, you work closely under the mentorship of a principal eng",
+          "signals": [
+            "You are learning to take decisions for your team and customers, you work closely under the mentorship of a principal engineer to get better at this.",
+            "You can clearly write & articulate architecture diagrams, high-level designs and low-level designs along with risks and POCs that would need to be carried out for successful execution and completion of project/product features.",
+            "You write detailed documents such as proposals/high-level design documents/plans such that based on these teams can drive the work they have to do and execute it.",
+            "You plan the project execution and call out risks etc. as needed and communicate this to stakeholders from internal as well as customer teams' point of view."
+          ],
+          "examples": []
+        },
+        {
+          "summary": "Principal Engineer — You make decisions for your team and for customers in their consultation and think through what is best in a given probl",
+          "signals": [
+            "You make decisions for your team and for customers in their consultation and think through what is best in a given problem statement, and you own those decisions and get better at this constantly.",
+            "You understand the balance between work, delivery, and business impact of it and you make a case for these things as needed.",
+            "For example, if you believe creating an open source project makes sense in a specific area, then you do all primary research, gather some stats in terms of investment and make a plan with potential returns and a long-term roadmap for it and present it to the executive team.",
+            "Similarly, you understand the impact of decisions around technology or the team you take on business and teams.",
+            "You can write high-level visions and directions of a project/product and direct a team into bootstrapping and getting execution started. Beyond initial execution, you are able to set a cadence to review progress and metrics to ensure successful execution.",
+            "You can lead the customer conversation on projects including design, and effort estimates and close the discussions and design closely by working with customers.",
+            "Customers & teams look up to you for your specific areas of expertise and depth and consult you in those areas.",
+            "Your ultimate management goal is to get to a stage where teams are self-sufficient and running smoothly and you don’t need to do any management per se.",
+            "You are actively involved in hiring people for your team's needs from an internal pool and also involved in the interviewing process to find the right talent. You also don’t hesitate to move a team member out if the person is not filling the role in the right way or is not able to perform despite multiple feedback and working closely to improve their performance."
+          ],
+          "examples": []
+        }
+      ]
+    },
+    {
+      "id": "DELIGHTING_PEOPLE",
+      "displayName": "Delighting People",
+      "categoryId": "people",
+      "description": "Delighting People across InfraCloud's engineering career ladder.",
+      "milestones": [
+        {
+          "summary": "Associate Engineer — You think of ways we can improve and ways we can delight people and discuss with your colleagues and improve your unders",
+          "signals": [
+            "You think of ways we can improve and ways we can delight people and discuss with your colleagues and improve your understanding of this space.",
+            "You seek feedback on areas that you need to work on from your lead every 1:1 which happens monthly.",
+            "You offer feedback to lead and customers on how we can improve systems, technologies and processes."
+          ],
+          "examples": []
+        },
+        {
+          "summary": "Engineer — You seek feedback and work on action items together with an experienced member of the team.",
+          "signals": [
+            "You seek feedback and work on action items together with an experienced member of the team.",
+            "You under-commit and over-deliver on tasks while ensuring quality.",
+            "You are able to explain and articulate the value of certain choices done in work and their impact on systems in the short and medium term.",
+            "You are mentoring at least 1-2 associate engineers - from your experiences of learning and building things. You are happy to jump onto a pair debugging session once in a while to help them think and learn better."
+          ],
+          "examples": []
+        },
+        {
+          "summary": "Senior Engineer — You demonstrate openness to others’ ideas. You adapt their communication style to most effectively communicate. You beli",
+          "signals": [
+            "You demonstrate openness to others’ ideas. You adapt their communication style to most effectively communicate. You believe in effectively and accurately sharing credit for ideas and collaborative efforts.",
+            "You are mentoring at least 2-3 associate engineers and 1-3 engineers - from your experiences of learning and building things. You are happy to jump onto a pair debugging session once in a while to help them think and learn better."
+          ],
+          "examples": []
+        },
+        {
+          "summary": "Staff Engineer — You love coaching people and a good chunk of your time is spent teaching engineers techniques to debug hard problems, wo",
+          "signals": [
+            "You love coaching people and a good chunk of your time is spent teaching engineers techniques to debug hard problems, work on complex designs and get better at their craft.",
+            "On the customer side you are involved in understanding the requirements and their goals and working closely with them to make them a reality with your team. You also empathize with the challenges and problems they face and constantly work to improve those.",
+            "You believe the success of your engineers and customer members is more important than yours and their success is a sign of your success eventually."
+          ],
+          "examples": []
+        },
+        {
+          "summary": "Principal Engineer — You are a bridge between engineers and the executive team of the company. You are able to understand and relate to their",
+          "signals": [
+            "You are a bridge between engineers and the executive team of the company. You are able to understand and relate to their issues, solve what you can locally and make a case for the issues which need to be addressed at the org or unit level.",
+            "You love coaching people whether it is on a project where you are advising or a new batch of joiners with whom you are teaching the craft of software engineering."
+          ],
+          "examples": []
+        }
+      ]
+    },
+    {
+      "id": "ORG_BUILDING",
+      "displayName": "Organization Building",
+      "categoryId": "people",
+      "description": "Organization Building across InfraCloud's engineering career ladder.",
+      "milestones": [
+        {
+          "summary": "Associate Engineer — You actively participate in some organization-level activities to learn more about the organization. An indicative list ",
+          "signals": [
+            "You actively participate in some organization-level activities to learn more about the organization. An indicative list of activities:",
+            "Internal technical meetups",
+            "Being a shadow interviewer to learn how to interview",
+            "All Hands Meetings, Engineering meetings",
+            "There are times when the work is a priority and you understand that you might miss attending such activities and you will catch up on recording later."
+          ],
+          "examples": []
+        },
+        {
+          "summary": "Engineer — You start participating in interviews and are learning the art of interviewing by asking questions to other experienced ",
+          "signals": [
+            "You start participating in interviews and are learning the art of interviewing by asking questions to other experienced interviewers. You also start doing a few interviews under the guidance of an experienced interviewer and learn from those.",
+            "You start contributing, at least once a quarter to one of the activities such as writing a blog or giving a talk about a specific problem you solved at the internal meetup. You may not be very good at it, but you are learning and getting better at it. You also realize that these activities are not just for “I wrote N blogs to meet criteria for my next role” but they actually make you think and present etc. - which makes you a better engineer and actually helps you level up."
+          ],
+          "examples": []
+        },
+        {
+          "summary": "Senior Engineer — You are an instrumental part of hiring programs and look out for engineers with potential and skills and bet on them. Yo",
+          "signals": [
+            "You are an instrumental part of hiring programs and look out for engineers with potential and skills and bet on them. You know that someone bet you at some point in your career and that is what has got you here. You are able to interview engineers and associate engineers effectively and highlight their strengths and weaknesses clearly as part of the interviewing process.",
+            "You are contributing to at least one organization-wide initiative this could be any one of the following (this list is indicative and not meant to be exhaustive).",
+            "Writing blogs or case studies of the work done by you or helping do the same to a junior engineer.",
+            "Teaching about a new technology/tool you worked on or learnt recently to rest of engineering organization.",
+            "Helping improve a training module, an on-boarding process - basically anything that can make us better as an organization."
+          ],
+          "examples": []
+        },
+        {
+          "summary": "Staff Engineer — You own and drive entirely at least one major initiative which has an organization-wide impact.",
+          "signals": [
+            "You own and drive entirely at least one major initiative which has an organization-wide impact.",
+            "You are accountable for the team you work with including their concerns, growth plans, and making them successful."
+          ],
+          "examples": []
+        },
+        {
+          "summary": "Principal Engineer — You own and drive a few major initiatives which have an organization-wide impact and work across functions and teams to ",
+          "signals": [
+            "You own and drive a few major initiatives which have an organization-wide impact and work across functions and teams to make things happen as part of those initiatives."
+          ],
+          "examples": []
+        }
+      ]
+    },
+    {
+      "id": "SOCIAL_CAPITAL",
+      "displayName": "Social Capital",
+      "categoryId": "people",
+      "description": "Social Capital across InfraCloud's engineering career ladder.",
+      "milestones": [
+        {
+          "summary": "Associate Engineer — You actively seek to understand community-level activities and initiatives such as meetups, conferences, and social caus",
+          "signals": [
+            "You actively seek to understand community-level activities and initiatives such as meetups, conferences, and social causes."
+          ],
+          "examples": []
+        },
+        {
+          "summary": "Engineer — You actively participate in community-level activities and initiatives such as meetups, conferences and social causes.",
+          "signals": [
+            "You actively participate in community-level activities and initiatives such as meetups, conferences and social causes.",
+            "You actively participate & attend the meetups etc. You give a shot at contributing, by giving a talk or being part of an organizing committee."
+          ],
+          "examples": []
+        },
+        {
+          "summary": "Senior Engineer — You actively contribute to community-level activities and initiatives such as meetups, conferences and social causes.",
+          "signals": [
+            "You actively contribute to community-level activities and initiatives such as meetups, conferences and social causes."
+          ],
+          "examples": []
+        },
+        {
+          "summary": "Staff Engineer — You actively run/majorly contribute to community-level activities and initiatives such as meetups and conferences - arou",
+          "signals": [
+            "You actively run/majorly contribute to community-level activities and initiatives such as meetups and conferences - around your area of specialization.",
+            "You understand the work we at InfraCloud do via various customer engagements and research on it and then present it via various channels such as conference talks, blogs, case study writing etc."
+          ],
+          "examples": []
+        },
+        {
+          "summary": "Principal Engineer — You actively run/majorly contribute to community-level activities and initiatives such as meetups and conferences - arou",
+          "signals": [
+            "You actively run/majorly contribute to community-level activities and initiatives such as meetups and conferences - around your area of specialization.",
+            "You understand the work we at InfraCloud do and research on it and then present it via various channels such as conference talks, blogs, case study writing etc.",
+            "You are a known and helpful person in the community and you do this by building relationships with folks and generally paying it forward."
+          ],
+          "examples": []
+        }
+      ]
+    },
+    {
+      "id": "ENABLING_TRAITS",
+      "displayName": "Enabling Traits",
+      "categoryId": "ops",
+      "description": "Enabling Traits across InfraCloud's engineering career ladder.",
+      "milestones": [
+        {
+          "summary": "Associate Engineer — ",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "Engineer — ",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "Senior Engineer — ",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "Staff Engineer — ",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "Principal Engineer — ",
+          "signals": [],
+          "examples": []
+        }
+      ]
+    }
+  ],
+  "milestonePoints": [
+    0,
+    2,
+    5,
+    11,
+    20,
+    32
+  ],
+  "pointsToLevels": [
+    {
+      "minPoints": 0,
+      "label": "Associate"
+    },
+    {
+      "minPoints": 8,
+      "label": "Engineer"
+    },
+    {
+      "minPoints": 24,
+      "label": "Senior"
+    },
+    {
+      "minPoints": 60,
+      "label": "Staff"
+    },
+    {
+      "minPoints": 110,
+      "label": "Principal"
+    }
+  ],
+  "titles": [
+    {
+      "label": "Associate Engineer",
+      "minPoints": 0,
+      "maxPoints": 7
+    },
+    {
+      "label": "Engineer",
+      "minPoints": 8,
+      "maxPoints": 23
+    },
+    {
+      "label": "Senior Engineer",
+      "minPoints": 24,
+      "maxPoints": 59
+    },
+    {
+      "label": "Staff Engineer",
+      "minPoints": 60,
+      "maxPoints": 109
+    },
+    {
+      "label": "Principal Engineer",
+      "minPoints": 110
+    }
+  ]
+}
