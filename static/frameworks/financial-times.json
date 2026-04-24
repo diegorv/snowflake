@@ -1,0 +1,430 @@
+{
+  "id": "financial-times",
+  "displayName": "Financial Times",
+  "categories": [
+    {
+      "id": "tech",
+      "label": "Technical & Curiosity",
+      "color": "#00abc2"
+    },
+    {
+      "id": "exec",
+      "label": "Execution",
+      "color": "#428af6"
+    },
+    {
+      "id": "people",
+      "label": "People & Leadership",
+      "color": "#e1439f"
+    }
+  ],
+  "tracks": [
+    {
+      "id": "PLANNING_ORGANISING",
+      "displayName": "Planning and Organising",
+      "categoryId": "exec",
+      "description": "Effectively manages activities within the available people, resources and keeps to expected or communicated timelines. Includes contributing to task break-down and estimating.",
+      "milestones": [
+        {
+          "summary": "Aware of how the team delivers and the best practices they use. Plans and delivers own work tasks.",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "Accurately plans and estimates tasks and ensures they are appropriately sized to deliver consistently.",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "Breaks down large, complex technical plans into manageable tasks. Contributes to accurate estimation of tasks.",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "Translates complex business requirements into detailed technical plans. Makes pragmatic trade-offs that balance delivery speed and technical debt, aligning with the FT's strategic priorities.",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "Leads large-scale planning initiatives, ensuring technical and business alignment. Prepares estimates and costs across large projects, factoring dependencies and risks.",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "Aligns strategies, sets clear objectives, and expertly communicates the organisational vision. Prioritises and balances people and resources across teams, ensuring strategic alignment with business goals. Manages all delivery against budget and financial plans.",
+          "signals": [],
+          "examples": []
+        }
+      ]
+    },
+    {
+      "id": "INDEPENDENT_WORKING",
+      "displayName": "Independent Working",
+      "categoryId": "exec",
+      "description": "Works independently as an individual at each level, showing self-reliance and initiative, and takes responsibility for completing tasks and seeing them through to completion.",
+      "milestones": [
+        {
+          "summary": "Independently delivers well defined tasks with support from their team. Takes ownership for tasks, and asks for help when unable to complete them.",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "Balances independent work with team collaboration and commitments, setting realistic expectations and proactively communicating any obstacles. Proactively fixes bugs in their code and ensures fixes make it into production.",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "Takes responsibility for projects, identifying and solving problems, while ensuring alignment with team goals.",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "Manages projects independently and demonstrates autonomy by proactively addressing risks and ensuring stakeholder and team alignment​.",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "Operates as a self-sufficient leader in the organisation, driving strategic initiatives and solving complex problems with little to no supervision.",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "Demonstrates a strong sense of responsibility and autonomy, guiding their team's technical direction and delivery against objectives.",
+          "signals": [],
+          "examples": []
+        }
+      ]
+    },
+    {
+      "id": "PROBLEM_SOLVING_DECISION_MAKING",
+      "displayName": "Problem Solving & Decision Making",
+      "categoryId": "exec",
+      "description": "Makes well-judged and timely decisions, identifies problems, and creates effective solutions.",
+      "milestones": [
+        {
+          "summary": "Identifies issues in daily tasks, learning about our use of data, logs and metrics that help investigate them.",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "Makes pragmatic decisions and independently resolves complex bugs.",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "Identifies inefficiencies in existing systems and proposes solutions to improve performance and reliability.",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "Resolves complex technical issues, evaluates the feasibility of new features, and makes technical decisions that impact performance.",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "Identifies systemic problems, develops long-term solutions, and makes critical technology decisions impacting strategy, including use of vendors​. Effectively consults and seeks data to support decision-making.",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "Employs problem-solving strategies and promotes creative solutions across their own team and the wider organisation. Makes high-impact decisions, seeking data to support choices and accurately weighing risks, benefits and cost impact.",
+          "signals": [],
+          "examples": []
+        }
+      ]
+    },
+    {
+      "id": "BUSINESS_IMPACT",
+      "displayName": "Business Impact",
+      "categoryId": "exec",
+      "description": "Recognises the broader business context and strategically aligns actions to support organisational goals.",
+      "milestones": [
+        {
+          "summary": "Understands basic business principles and ensures their work supports team goals, assisting in project delivery.",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "Recognises and suggests opportunities for business improvements through technology, proactively identifying inefficiencies.",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "Articulates the business value of technical projects to stakeholders, bridging the gap between technical teams and business requirements.",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "Suggests opportunities to optimise the use of people and resources (e.g. funds, technology solutions) and improve efficiency.",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "Initiates and leads projects that drive significant business outcomes, often spanning multiple teams or products or systems. Demonstrates high degree of awareness and applies context of the business areas they work with. Champions quality of technical solutions and architecture. Contributes to financial and vendor management to achieve desired results.",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "Develops and implements technology strategies that drive business growth, shape the technology roadmap, and achieve business goals. Practices financial and vendor management to deliver on strategy for own department and wider business.",
+          "signals": [],
+          "examples": []
+        }
+      ]
+    },
+    {
+      "id": "COMMUNICATION",
+      "displayName": "Communication",
+      "categoryId": "people",
+      "description": "Effectively listens, understands, and conveys messages in a way that is appropriate to the audience - including verbal, written, use of diagrams. Uses a range of techniques to influence and make persuasive arguments. Adopts a patient, empathic style, avoids jargon, and checks for understanding in others.",
+      "milestones": [
+        {
+          "summary": "Presents their work clearly and talks about progress concisely in meetings, explaining their approach.",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "Leads technical discussions and meetings while providing clear documentation of processes and decisions.",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "Presents clearly to larger internal groups, facilitates productive discussions, and ensures understanding and alignment.",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "Effectively presents technical decisions and updates to the wider business, listens actively, manages crucial conversations, and provides quality feedback.",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "Role models clear, concise, effective communication, assists teams in active listening, communicates difficult messages, and uses feedback to drive improvements, adapts communication to engage diverse audiences.",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "Clearly articulates departmental strategies and wider business context, tailors messages for intended audiences, and delivers challenging messages skillfully. Proactively communicates with stakeholders internally and externally (including vendors).",
+          "signals": [],
+          "examples": []
+        }
+      ]
+    },
+    {
+      "id": "TEAM_WORK",
+      "displayName": "Team Work",
+      "categoryId": "people",
+      "description": "Collaborates effectively across the organisation.",
+      "milestones": [
+        {
+          "summary": "Seeks guidance and input from peers, actively participates in discussions, and is eager to assist teammates.",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "Supports team members in achieving their goals, helps overcome obstacles, and shares knowledge to contribute to a positive team environment​. Provides clear, actionable, timely feedback on teammate’s work.",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "Facilitates team collaboration, and engages in cross-functional projects. Promotes mutual respect and values diverse perspectives.",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "Leads by example in fostering a collaborative culture across teams. Coordinates efforts and builds consensus to drive project success. Contributes to wider FT initiatives aimed at improving the Technology team.",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "Influences cross-functional collaboration and knowledge sharing, influences and requires input from multiple teams, and promotes an inclusive culture where different opinions are heard.",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "Oversees and drives collaborative efforts across their teams and the wider organisation, ensuring strategic alignment, resolving complex issues and conflicts, builds strong cross-division relationships, and champions a culture where collective efforts achieve strategic goals.",
+          "signals": [],
+          "examples": []
+        }
+      ]
+    },
+    {
+      "id": "CURIOSITY_LEARNING",
+      "displayName": "Curiosity & Learning",
+      "categoryId": "tech",
+      "description": "Continuously seeks and creates opportunities for learning and growth.",
+      "milestones": [
+        {
+          "summary": "Builds self-awareness about their strengths and areas for development.",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "Takes responsibility for their own development, actively seeks feedback from others to develop learning goals.",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "Experiments with new tools, technologies and techniques as part of their professional development activities.",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "Demonstrates continuous learning and continuous improvement in their own work, and encourages the same as part of the team's work.",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "Encourages continuous learning and innovation by solving complex problems, experimenting with new approaches, and fostering a culture of improvement, both for themselves and for the development of others.",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "Fosters a culture of curiosity and continuous learning by elaborating training strategies, promoting peer-to-peer learning, adopting new methodologies, and motivating team members to embrace learning.",
+          "signals": [],
+          "examples": []
+        }
+      ]
+    },
+    {
+      "id": "LEADERSHIP",
+      "displayName": "Leadership of Self and Others",
+      "categoryId": "people",
+      "description": "Guides oneself and inspires & develops others to achieve common goals. Reflects on their personal growth to identify areas to enhance their performance and for further development.",
+      "milestones": [
+        {
+          "summary": "Demonstrates self-motivation, takes initiative, and uses feedback for continuous improvement.",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "Known for their initiative and reliability. Begins to influence peers through positive behavior and collaborative support, contributing to team success.",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "Leads by example, takes ownership of complex tasks, and encourages team members to deliver high quality code and solutions through feedback, code reviews, pairing sessions etc.",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "Guides and influences the team through expertise, and balances mentorship with project leadership. Oversees multiple projects, ensures progress, and intervenes when necessary to keep work on track.",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "Leads change across a broad technology domain, shaping and defining a technical vision, and fostering a climate of trust across teams. Guides teams in developing reliable, maintainable software that aligns with the company’s strategic objectives. Provides close technical leadership and support to engineering teams, particularly tech leads.",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "Guides and leads engineering teams across multiple functional areas, developing the next generation of leadership talent, fostering a high-performance organisation. Leads with deep empathy, championing diversity and inclusion across the organisation.",
+          "signals": [],
+          "examples": []
+        }
+      ]
+    },
+    {
+      "id": "TECHNICAL",
+      "displayName": "Technical",
+      "categoryId": "tech",
+      "description": "Demonstrates and shares technical and domain expertise, and develops high-quality, secure and reliable software solutions following industry standards.",
+      "milestones": [
+        {
+          "summary": "1. Writes well-tested code and documentation in keeping with our guidelines and conventions. Applies changes and configuration and takes care to test solutions. 2. Uses tooling and systems at a basic level, including managing their development environment, source control, CI/CD pipelines, and monitoring.",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "1. Writes clear, easy to follow code, tests, and/or performs technical processes consistently and according to guidelines. 2. Considers non-functional requirements in their work (accessibility, performance, security, reliability, observability etc.) 3. Contributes to troubleshooting and resolving production incidents in their area. 4. Knows how to use different diagnostic approaches to debug basic issues.",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "1. Highly proficient in their engineering domain. Writes code and documentation that peers consider high quality. 2. Designs solutions that account for non-functional requirements such as security, reliability, observability, and accessibility, alongside functional needs. 3. Leads the resolution of incidents. Balances short-term needs with long-term stability during production issues. Follows up on actions from incident retrospectives. 4. Able to pick up unfamiliar code, processes, or issues to troubleshoot or review.",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "1. Is regularly recognised in their team and group for highly impactful technical contributions of the highest quality. 2. Provides architectural guidance on projects 3. Hands-on technical implementation, as well as leading on delivery to keep projects on track. 4. Has good comprehension of technologies and is able to compare & contrast them to make choices which balance functional and non-functional requirements",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "1. Hands-on solution delivery 2. Leads the design of technical solutions for complex challenges, ensuring that solutions meet required standards for security and reliability. 3. Collaborates with other senior engineers, architects and vendors to ensure a robust overall architecture for the FT estate. 4. Identifies high-impact areas for improvement and ensures technical issues are addressed promptly, engaging with relevant teams and stakeholders to drive progress. 5. Is a source of deep technical expertise in their area",
+          "signals": [],
+          "examples": []
+        },
+        {
+          "summary": "1. Oversees the strategic planning, implementation, and management of technology initiatives and drives innovation to enhance efficiency and competitiveness. 2. Accountable for performance, security and reliability of products and services, including integrations with vendor-supplied services. 3. Selects complementary vendor-supplied products and services which represent value-for-money, and meet criteria to choose buy-over-build decision.",
+          "signals": [],
+          "examples": []
+        }
+      ]
+    }
+  ],
+  "milestonePoints": [
+    0,
+    1,
+    3,
+    6,
+    10,
+    15,
+    22
+  ],
+  "pointsToLevels": [
+    {
+      "minPoints": 0,
+      "label": "Junior"
+    },
+    {
+      "minPoints": 10,
+      "label": "Engineer"
+    },
+    {
+      "minPoints": 30,
+      "label": "Senior 1"
+    },
+    {
+      "minPoints": 55,
+      "label": "Senior 2"
+    },
+    {
+      "minPoints": 90,
+      "label": "Principal"
+    },
+    {
+      "minPoints": 135,
+      "label": "Tech Director"
+    }
+  ],
+  "titles": [
+    {
+      "label": "Junior Engineer",
+      "minPoints": 0,
+      "maxPoints": 29
+    },
+    {
+      "label": "Engineer",
+      "minPoints": 10,
+      "maxPoints": 54
+    },
+    {
+      "label": "Senior Engineer 1",
+      "minPoints": 30,
+      "maxPoints": 89
+    },
+    {
+      "label": "Senior Engineer 2",
+      "minPoints": 55,
+      "maxPoints": 134
+    },
+    {
+      "label": "Principal Engineer",
+      "minPoints": 90
+    },
+    {
+      "label": "Technology Director",
+      "minPoints": 135
+    }
+  ]
+}

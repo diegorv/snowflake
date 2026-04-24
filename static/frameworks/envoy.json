@@ -1,0 +1,291 @@
+{
+  "id": "envoy",
+  "displayName": "Envoy",
+  "categories": [
+    {
+      "id": "impact",
+      "label": "Scope & Impact",
+      "color": "#00abc2"
+    },
+    {
+      "id": "craft",
+      "label": "Craft",
+      "color": "#428af6"
+    },
+    {
+      "id": "people",
+      "label": "Behaviors & Mindset",
+      "color": "#e1439f"
+    }
+  ],
+  "tracks": [
+    {
+      "id": "SCOPE",
+      "displayName": "Scope",
+      "categoryId": "impact",
+      "description": "Scope expectations at each band (Envoy engineering ladder).",
+      "milestones": [
+        {
+          "summary": "Engineer I (Band 1)",
+          "signals": [
+            "You will write readable code, adhering to language, framework, and style-guide conventions. You follow good coding principles such as DRY, well scoped functions, and small commits.",
+            "You will provide consistent, sufficient, and comprehensive test coverage.",
+            "You will fix bugs and associated tests, backfilling coverage starting with a failing test for each of the bugs to be fixed.",
+            "You will complete stories as part of a larger project.",
+            "You will actively participate in and contribute to team process including planning, standups, and retros.",
+            "You will maintain ticket state and keep stakeholders apprised.",
+            "You will produce constrained, focused, fully articulated pull-requests.",
+            "You will participate in on-call rotation, using the experience to learn from more senior engineers and understand our systems."
+          ],
+          "examples": []
+        },
+        {
+          "summary": "Engineer II (Band 2)",
+          "signals": [
+            "You will own a small component or project, guiding it from inception through completion in a timely manner.",
+            "You design solutions to medium complexity problems, managing simplicity, completeness, performance, and risk-tolerance.",
+            "You will seek and incorporate reviews; handle testing, instrumentation, deployment, and monitoring.",
+            "You will provide thoughtful, constructive code reviews.",
+            "You will take on mentorship of more junior engineers, highlight their accomplishments, and help them find their way in the organization.",
+            "You will participate in an on-call rotation, applying your expertise to solve problems where you’re familiar, or helping to find the right person to solve the problems where you’re not."
+          ],
+          "examples": []
+        },
+        {
+          "summary": "Engineer III (Band 3)",
+          "signals": [
+            "You may take on a Technical Lead role on a project, for a particular component or area of the codebase, or for your broader team.",
+            "You find innovative solutions to complex problems.",
+            "You will take on an ownership stake in the work of your entire team.",
+            "You will proactively improve the lot of engineers on call by creating automated tasks, writing runbooks, and ensuring all errors appearing in logs are actual errors rather than simply living with “some we can ignore.”",
+            "You will contribute to open-source projects on behalf of the organization.",
+            "You will participate in hiring as a technical interviewer.",
+            "You take initiative and pitch in.  You jump into areas that need your help, you leave code better than when you found it, and you actively contribute to your team’s or the engineering org’s priorities.",
+            "You are comfortable spiking or creating an MVP in order to ensure we learn quickly, and understand the appropriate tradeoffs to make to do so."
+          ],
+          "examples": []
+        },
+        {
+          "summary": "Staff Engineer (Band 4)",
+          "signals": [
+            "You will own large components, systems, or projects, coordinating and communicating with teams and leads across the organization.",
+            "You will design solutions to high complexity problems, with high-availability and high-reliability in mind.",
+            "You will instigate design discussions and facilitate engineering-wide learning.",
+            "You will represent engineering across the organization.",
+            "You will be the primary driver of resolving production issues, holding post-mortems, and owning long-term fixes.",
+            "You will take on independent greenfield projects with an eye to furthering the products and services of the organization.",
+            "You help decide when it is appropriate to spike or create an MVP in order to ensure we learn quickly, and can rally the team around the appropriate tradeoffs needed to do so."
+          ],
+          "examples": []
+        },
+        {
+          "summary": "Principal Engineer (Band 5)",
+          "signals": [
+            "You will facilitate our most impactful architecture, language, framework, and component decisions.",
+            "You will proactively dive into teams or projects that need guidance or resources.",
+            "You will take on projects balancing strategic importance to the business and long term importance to our technical foundations."
+          ],
+          "examples": []
+        }
+      ]
+    },
+    {
+      "id": "SKILLS_EXPERIENCE",
+      "displayName": "Skills & Experience",
+      "categoryId": "craft",
+      "description": "Skills & Experience expectations at each band (Envoy engineering ladder).",
+      "milestones": [
+        {
+          "summary": "Engineer I (Band 1)",
+          "signals": [
+            "You possess a rudimentary understanding of computer science fundamentals: data structures, methodologies, and strategies.",
+            "You have practical knowledge in the specific programming language(s) and framework(s) used by your team.",
+            "You are capable of diagnosing problems, planning and applying fixes.",
+            "You are motivated to learn new technologies and techniques and demonstrate an ability to turn these learnings into new skills and experiences quickly.",
+            "You can communicate your understanding of a problem and your proposed solution.",
+            "You are familiar with deploying working software.",
+            "You have a good handle on the development processes we employ (Scrum, Kanban) and associated tools we use (Git, Jira, Confluence)."
+          ],
+          "examples": []
+        },
+        {
+          "summary": "Engineer II (Band 2)",
+          "signals": [
+            "You have a background and experience in software development —  a Computer Science degree (or comparable) and several years’ working experience in non-trivial software development.",
+            "You possess a deep understanding of computer science fundamentals: data structures, algorithms, and strategies.",
+            "You have in-depth knowledge of multiple programming languages, frameworks, and/or specialized systems. You are able to discern and articulate the relative merits of each.",
+            "You have knowledge of how the internet and networking works (i.e. DNS, HTTP, TLS, Certificates, etc) and the tools and services that enable people and devices to connect to services (e.g., browsers, CDNs, proxies, etc).",
+            "You have some knowledge of and experience with how systems work at scale (e.g. threads, virtualization, configuration management, load balancers, caching).",
+            "You are skilled in managing your time and the projects you lead or are a part of and can leverage processes, ceremonies, and tools to do so."
+          ],
+          "examples": []
+        },
+        {
+          "summary": "Engineer III (Band 3)",
+          "signals": [
+            "You have a deep understanding of various pieces of our codebase.",
+            "You can explain our application architecture, infrastructure, and codebase to others.",
+            "You have a good understanding of how each component, service, and process affects user experience and system performance.",
+            "You are a systems thinker. You think about how your designs will affect other aspects of the service and how it will evolve in the future.",
+            "You have experience building transactional applications at scale.  You’ve worked w/ APIs (REST, JSON/HTTP, GraphQL) and know how the server-side works — if you didn’t build it yourself.",
+            "You’re a skilled manager of the projects you lead or are a part of.  You can organize and lead processes, ceremonies, and tools to do so (e.g. sprint planning sessions, standups, task tracking boards, risk plans.)"
+          ],
+          "examples": []
+        },
+        {
+          "summary": "Staff Engineer (Band 4)",
+          "signals": [
+            "You have a deep understanding of the landscape of our codebases, components, and services.",
+            "You have a mastery of your primary languages and frameworks.",
+            "You are up to date with the landscape of technologies and techniques and able to evaluate their impact on the organization and its products and services.",
+            "You understand and drive techniques for improving engineering productivity.",
+            "You are experienced with a wide variety of development approaches, patterns, and implementation styles."
+          ],
+          "examples": []
+        },
+        {
+          "summary": "Principal Engineer (Band 5)",
+          "signals": [
+            "You are known inside the engineering organization and outside as a master of your primary languages and frameworks.",
+            "You are able to represent the engineering organization to the outside world.",
+            "You are an authority in multiple technical disciplines, languages, frameworks, and systems.",
+            "You demonstrate a unique and extraordinarily effective problem solving perspective and approach.",
+            "You are capable of developing entirely new implementations of industry solutions: data structures, frameworks, libraries, services, hardware, etc."
+          ],
+          "examples": []
+        }
+      ]
+    },
+    {
+      "id": "BEHAVIORS_MINDSET",
+      "displayName": "Behaviors & Mindset",
+      "categoryId": "people",
+      "description": "Behaviors & Mindset expectations at each band (Envoy engineering ladder).",
+      "milestones": [
+        {
+          "summary": "Engineer I (Band 1)",
+          "signals": [
+            "You are emotionally mature & humble. You care about being effective over being right. Ideally you’ve made major changes and decisions in your life and learned from the results.",
+            "You geek out about how cool software is, inhale articles and books on the subject, and enjoy trying out different languages, technologies, and methodologies.",
+            "Your focus is primarily at the syntax level, focused on code clarity and readability.",
+            "You are becoming increasingly comfortable with the confidence that testing brings to your coding.",
+            "You ask for reviews of the code you're writing and feedback on the work you’re doing.",
+            "You seek out mentorship and soak up opportunities for learning.",
+            "You are focused on making only new mistakes and being able to articulate what you learned.",
+            "You are hungry and driven to contribute and provide value to your team and to the product and organization.  You set aggressive milestones for yourself and do extra to meet them.",
+            "You are fine-tuning your communication skills: you are an active listener and are able to articulate your thoughts/feelings.  You regularly provide updates and ask for help quickly."
+          ],
+          "examples": []
+        },
+        {
+          "summary": "Engineer II (Band 2)",
+          "signals": [
+            "You're championing quality through your own coding practices.",
+            "You are actively working to hone your craft and be a better programmer.",
+            "You seek to learn more about the organization, our business, and problem domain.",
+            "Testing is a natural part of your workflow; you feel better when you're shipping a test. You guarantee your software and are the first to know if something is amiss.",
+            "You enjoy participating in and providing feedback on design and code reviews. You're socializing and testing your designs for components/modules before cutting code.",
+            "You are accountable: if you ship something you own it from inception to production.",
+            "You are collaborative: you work with other engineers on solutions that cut across teams/technologies.",
+            "You can work independently: you manage your own time efficiently with a strong sense of prioritization.",
+            "You can manage your workload: you communicate frequently and honestly to stakeholders and yourself about the work you commit to.",
+            "You are fast-paced: you love the speed of and impact you have in startups.  You set aggressive milestones for yourself and do extra to meet them."
+          ],
+          "examples": []
+        },
+        {
+          "summary": "Engineer III (Band 3)",
+          "signals": [
+            "You're championing quality throughout your team.",
+            "You have a passion for scale and performance. You think people deserve access to their data in milliseconds and feel slow web pages are an insult.  You worry about what happens when we have 100x more customers, but are practical and experienced to know how to solve what you need to right now.",
+            "You test components and microservices comprehensively — both in isolation and across internal systems and external services.",
+            "You're leading design conversations and proposing design specifications for components, interfaces, and services.",
+            "You're bringing more to code reviews than review, actively raising the bar for code quality, scalability, and confidence.",
+            "You are accountable not only for your own work, but for those of your teammates.",
+            "You are someone with extremely high standards.  You’re practical and know perfect is the enemy of good, but you aspire for us to be great.",
+            "You are an owner.  You feel personally accountable and responsible and know seeing the problem is less than half of it.  You look for problems and inefficiencies and find elegant solutions to them before they become major issues.",
+            "You stay on top of risks. As our organization becomes commonplace around the world, the products and services we provide and data we store will be more and more valuable.  It is your job to make things highly available, performant, and secure as appropriate."
+          ],
+          "examples": []
+        },
+        {
+          "summary": "Staff Engineer (Band 4)",
+          "signals": [
+            "You are actively seeking out opportunities to teach and mentor fellow team members.",
+            "You are actively pushing back on over-engineered solutions. Conversely, you are advocating for improving under-implemented solutions.",
+            "You are quick to revisit past assumptions - the solution that worked 'then' may not be the right solution for 'now.'",
+            "You help determine team goals, KPIs, and projects necessary to deliver on those goals / measure KPIs.",
+            "You actively contribute to motivating and growing the team. You're asked to provide performance feedback and input on opportunities for individual growth.",
+            "You are a picture of responsibility and accountability. The organization depends on you.",
+            "You play a key role in hiring and promoting the organization as an employer."
+          ],
+          "examples": []
+        },
+        {
+          "summary": "Principal Engineer (Band 5)",
+          "signals": [
+            "You are an evangelist for the engineering organization and the work we do in the interest of helping us hire/retain fantastic engineering talent.",
+            "You are a key member and decision-maker in the engineering leadership team. Your opinion will carry significant strategic weight."
+          ],
+          "examples": []
+        }
+      ]
+    }
+  ],
+  "milestonePoints": [
+    0,
+    2,
+    5,
+    10,
+    18,
+    30
+  ],
+  "pointsToLevels": [
+    {
+      "minPoints": 0,
+      "label": "Engineer I"
+    },
+    {
+      "minPoints": 6,
+      "label": "Engineer II"
+    },
+    {
+      "minPoints": 15,
+      "label": "Engineer III"
+    },
+    {
+      "minPoints": 30,
+      "label": "Staff"
+    },
+    {
+      "minPoints": 54,
+      "label": "Principal"
+    }
+  ],
+  "titles": [
+    {
+      "label": "Engineer I (Band 1)",
+      "minPoints": 0,
+      "maxPoints": 5
+    },
+    {
+      "label": "Engineer II (Band 2)",
+      "minPoints": 6,
+      "maxPoints": 14
+    },
+    {
+      "label": "Engineer III / Senior (Band 3)",
+      "minPoints": 15,
+      "maxPoints": 29
+    },
+    {
+      "label": "Staff Engineer (Band 4)",
+      "minPoints": 30,
+      "maxPoints": 53
+    },
+    {
+      "label": "Principal Engineer (Band 5)",
+      "minPoints": 54
+    }
+  ]
+}

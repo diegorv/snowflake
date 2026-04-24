@@ -1,0 +1,220 @@
+{
+  "id": "meetup-makers",
+  "displayName": "Meetup (Makers path)",
+  "categories": [
+    {
+      "id": "maker",
+      "label": "Maker",
+      "color": "#ed1c40"
+    }
+  ],
+  "tracks": [
+    {
+      "id": "MAKER",
+      "displayName": "Engineering (IC)",
+      "categoryId": "maker",
+      "description": "Individual-contributor engineering path at Meetup, from Engineer to Principal Architect.",
+      "milestones": [
+        {
+          "summary": "Engineer",
+          "signals": [
+            "Core language competencies",
+            "Fundamental computer science competency",
+            "Experience working on a team",
+            "A thirst for knowledge and continuous learning",
+            "A connection to Meetup’s mission and values"
+          ],
+          "examples": [
+            "Communicate well with, and give direct and candid feedback to, manager and all members of the team",
+            "Alert manager/team to any issues preventing their work from being accomplished",
+            "Actively pursue improving engineering skills, including but not limited to problem solving, writing readable/testable/efficient code, mastering technology in our stack, and anticipating scaling issues.",
+            "Perform well-defined engineering tasks in a reasonable amount of time; doesn’t get caught up in the unknown, works to figure it out",
+            "Demonstrate confidence proposing a final recommendation",
+            "Demonstrate ability to learn from mistakes",
+            "Lean into challenges when they offer the potential to create large impact, and does so with productivity and positivity",
+            "Become an expert with at least one area or domain of the code/product",
+            "Follow through with the code they write and make sure it is always tested/launched/easy to maintain",
+            "Review other engineers’ code and provide constructive feedback",
+            "Launch software that puts customer needs first and increases customer satisfaction",
+            "Help grow the engineering team through involvement in the technology community (conferences, meetups, blog posts, open source projects, etc) and referrals",
+            "Have their actions reflect individual, team, discipline, and company goals, and say “no” to projects that don’t align with their goals",
+            "Be able to launch to production independently (if needed)",
+            "Have production access and use it responsibly",
+            "Demonstrate support of a team/company decision"
+          ]
+        },
+        {
+          "summary": "Senior Engineer",
+          "signals": [
+            "Successfully performed the role of an Engineer at Meetup or equivalent role elsewhere",
+            "Performed work that was evaluated to be done at ‘high quality’ by peers",
+            "Succeeded as an engineer when presented with projects of increasing complexity over time across multiple areas or domains of the code/product",
+            "Demonstrated ability to learn from mistakes",
+            "Demonstrated ability to unblock themselves and other team members",
+            "Earned a high level of trust amongst team to own a task/project without needing much supervision",
+            "Shown they take responsibility for their code: follow through with it and address any issues that result from it in the future",
+            "A high level of understanding about where their work fits in and how to be useful and successful on their team",
+            "A high level of craftsmanship about their work, the end experience of the user, and impact on overall product",
+            "Demonstrated good communication skills with other engineers and teammates, including being productive with their emotions; proposes solutions when articulating problems"
+          ],
+          "examples": [
+            "Become an expert with multiple areas or domains of the code/product",
+            "Show curiosity to not only learn new things but fully understand how they work",
+            "Be highly productive - have a reputation for getting things done quickly and efficiently",
+            "Be a mentor for other engineers",
+            "Require very little oversight from manager/team leads",
+            "Own and complete full projects beginning with identifying and communicating the problems to be solved, getting and incorporating feedback on proposed architectural solutions, and making a final decision as the owner of a project.",
+            "Deconstruct a problem into an executable action plan for themselves and other engineers - also perform them in a high quality way without issue",
+            "Consistently tie back a project to a team goal",
+            "Set and maintain high individual and team expectations",
+            "Actively participate in frequent code/design/architecture reviews",
+            "Be able to communicate well with all engineers regardless of seniority",
+            "Generate support for a company/team decision",
+            "Work across engineering teams (dev, QA, systems) to ensure new code launches smoothly and customer needs are met",
+            "Monitor the outcomes of team’s actions to learn from mistakes and replicate successes",
+            "Interview prospective candidates and provide thoughtful evaluations and feedback"
+          ]
+        },
+        {
+          "summary": "Staff Engineer",
+          "signals": [
+            "The ability to take a nebulous project, talk to the right people, architect a solution, split it up into tasks, and ultimately get it done quickly and efficiently",
+            "The respect and trust of other engineers within the company as strong technical leaders and mentors for others",
+            "The ability to diagnose, fix, and coordinate deployment of bug fixes (and do this extremely quickly in emergency situations)",
+            "A reputation for submitting maintainable code that is well tested for review and QA",
+            "A reputation for launching quality, turbulence-free code and projects",
+            "The ability to balance multiple goals across tech/product/strategy/other teams and concerns",
+            "The ability to communicate effectively with non-engineers of varying levels at the company",
+            "Stepped up to take leadership of a project or team when needed"
+          ],
+          "examples": [
+            "Provide task definition and design/architecture direction for other engineers",
+            "Demonstrate expert knowledge of their discipline",
+            "Remain flexible & put customer needs first",
+            "Accurately estimate time to complete projects given structure of team and deliver on those estimates",
+            "Allocate people within a team to maximise output of useful and team-goal-focused engineering work",
+            "Monitor performance of engineers on team, and partner with engineering managers on mentoring and growth",
+            "Look for ways to reduce distractions, interruptions, and unplanned work for themselves and others",
+            "Challenge their team to demonstrate greater sense of urgency",
+            "Model bringing solutions to problems (not surfacing problems alone) and teach others on their team how to do the same",
+            "Be active in the technology community, positively contribute to Meetup’s reputation, and find great candidates to grow the Meetup team",
+            "Develop and constantly refine technical and team fit assessments (coding exercises, interview questions, etc) for interviews",
+            "Ensure code/design/architecture reviews happen on teams and that work follows established best practices and standards",
+            "Coordinate evaluation of tools and frameworks for the engineering team",
+            "Take responsibility for actions of their team, good and bad"
+          ]
+        },
+        {
+          "summary": "Senior Staff Engineer",
+          "signals": [
+            "The ability to take a business unit’s strategic initiative, define projects and work with teams to assign ownership and priority to those projects.",
+            "The respect and trust of leadership within the company as a strong technical resource for collaborative decisions",
+            "The ability to work with leadership during an emergency situation to identify and communicate impact and progress",
+            "A reputation for delivering high quality projects with cross-team impact.",
+            "A reputation with engineers within the company as a resource for technical, communications and leadership mentorship",
+            "Demonstrated ability and eagerness to support, advocate, and sponsor for others to step up to take leadership of a project or team"
+          ],
+          "examples": [
+            "Be accountable for design and architecture direction by providing feedback and mentoring other engineers within their business unit and working with principal engineers and architects",
+            "Plan, sequence, forecast, and track projects effectively across the business unit",
+            "Work with senior managers & directors to ensure engineering effort is focussed on the most impactful areas for their business unit",
+            "Monitor technical performance of engineers in a business unit, and partner with engineering managers and leads on mentoring and growth",
+            "Develop and constantly refine technical, leadership, and team fit assessments (coding exercises, interview questions, etc) for interviews across the Engineering organization",
+            "Lead code/design/architecture reviews across teams and mentor & coach engineers to ensure work follows best practices & standards. Create and evolve business unit wide practices and share with the rest of the organization.",
+            "Ensure that all business unit decisions are in service of their customers",
+            "Help business unit teammates communicate their design and architecture decisions throughout the company",
+            "Acts as a mentor to other senior and staff engineers who are developing their own mentees"
+          ]
+        },
+        {
+          "summary": "Principal Engineer",
+          "signals": [
+            "Expert knowledge of their practice area's stack (mobile/web/core/data/ml/infra/QA)",
+            "A track record of successfully leading, delivering, and evolving large technical projects and hitting results",
+            "A track record of solving difficult technical challenges and anticipating technical problems ahead of time",
+            "The ability and proven desire to successfully collaborate and communicate across teams to drive technical projects to completion",
+            "The ability to follow several engineering projects across the company and get involved with teams to facilitate delivering results",
+            "A deep understanding and interest in partnering with the Director in your practice area to turn business and product strategy into technical strategy, roadmap, and priorities for your practice area",
+            "Demonstrated ability to regularly provide clear, actionable feedback in all directions, finding the appropriate group venues to do so"
+          ],
+          "examples": []
+        },
+        {
+          "summary": "Principal Architect",
+          "signals": [
+            "Expert knowledge of one practice area’s stack (mobile/web/core/data/ml/infra/QA stack)",
+            "Advanced knowledge of multiple practice areas’ stacks (and ability to quickly learn others)",
+            "A love for and success with mentoring, teaching, sponsoring, coaching, and collaborating with engineers",
+            "Deep experience successfully architecting, anticipating key issues in advance, delivering, and evolving large and small technical projects",
+            "A deep understanding and interest in turning business and product strategy into technical architecture and strategy across the engineering team",
+            "Proven ability and strong desire to collaborate with teams on multiple projects across the company to facilitate engineering and architecture decisions that lead to a high quality Meetup product and experience to members",
+            "Demonstrated ability to regularly provide clear, actionable feedback in all directions, finding the appropriate group venues to do so"
+          ],
+          "examples": []
+        }
+      ]
+    }
+  ],
+  "milestonePoints": [
+    0,
+    2,
+    5,
+    10,
+    20,
+    35,
+    55
+  ],
+  "pointsToLevels": [
+    {
+      "minPoints": 0,
+      "label": "Engineer"
+    },
+    {
+      "minPoints": 5,
+      "label": "Senior"
+    },
+    {
+      "minPoints": 15,
+      "label": "Staff"
+    },
+    {
+      "minPoints": 30,
+      "label": "Senior Staff"
+    },
+    {
+      "minPoints": 45,
+      "label": "Principal"
+    }
+  ],
+  "titles": [
+    {
+      "label": "Engineer",
+      "minPoints": 0,
+      "maxPoints": 4
+    },
+    {
+      "label": "Senior Engineer",
+      "minPoints": 5,
+      "maxPoints": 14
+    },
+    {
+      "label": "Staff Engineer",
+      "minPoints": 15,
+      "maxPoints": 29
+    },
+    {
+      "label": "Senior Staff Engineer",
+      "minPoints": 30,
+      "maxPoints": 44
+    },
+    {
+      "label": "Principal Engineer",
+      "minPoints": 45,
+      "maxPoints": 54
+    },
+    {
+      "label": "Principal Architect",
+      "minPoints": 55
+    }
+  ]
+}
