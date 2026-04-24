@@ -1,4 +1,9 @@
-.next
 node_modules
-out
-yarn-error.log
+/.svelte-kit
+/build
+/coverage
+.DS_Store
+.env
+.env.*
+!.env.example
+vite.config.ts.timestamp-*
