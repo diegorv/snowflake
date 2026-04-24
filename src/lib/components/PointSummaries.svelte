@@ -38,24 +38,29 @@
   .label {
     font-size: 12px;
     color: #666;
+    line-height: 1.3;
+    overflow-wrap: break-word;
   }
   .value {
     font-size: 26px;
     font-weight: 600;
     margin-top: 4px;
+    line-height: 1.1;
+    overflow-wrap: break-word;
   }
   @media (max-width: 480px) {
     .summary {
       gap: 6px;
     }
     .cell {
-      padding: 8px 6px;
+      padding: 8px 4px;
     }
     .value {
-      font-size: 22px;
+      font-size: 20px;
     }
     .label {
-      font-size: 11px;
+      font-size: 10px;
+      letter-spacing: -0.01em;
     }
   }
 </style>
