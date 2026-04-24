@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { scaleLinear } from 'd3-scale';
   import { currentFramework } from '$lib/stores/framework.js';
   import {
     categoryColorMapStore,
@@ -9,56 +8,48 @@
     totalPointsStore
   } from '$lib/stores/derived.js';
 
-  const WIDTH = 550;
-  const HEIGHT = 28;
-
-  $: scale = scaleLinear().domain([0, $maxPointsStore || 1]).range([0, WIDTH]);
-
   $: segments = (() => {
     const out: {
-      x: number;
-      width: number;
-      color: string;
       categoryId: string;
       points: number;
+      color: string;
       label: string;
+      fraction: number;
     }[] = [];
-    let acc = 0;
     const categories = $currentFramework?.categories ?? [];
+    const max = $maxPointsStore || 1;
     for (const { categoryId, points } of $categoryPointsStore) {
       if (points === 0) continue;
-      const x = scale(acc);
-      const w = scale(acc + points) - x;
       out.push({
-        x,
-        width: w,
-        color: $categoryColorMapStore.get(categoryId) ?? '#ccc',
         categoryId,
         points,
-        label: categories.find((c) => c.id === categoryId)?.label ?? categoryId
+        color: $categoryColorMapStore.get(categoryId) ?? '#ccc',
+        label: categories.find((c) => c.id === categoryId)?.label ?? categoryId,
+        fraction: points / max
       });
-      acc += points;
     }
     return out;
   })();
+
+  $: remaining = Math.max(0, ($maxPointsStore || 0) - ($totalPointsStore || 0));
 </script>
 
 <div class="thermometer" aria-label="Level progress">
-  <svg
-    viewBox={`0 0 ${WIDTH} ${HEIGHT}`}
-    width="100%"
-    class="bar"
-    role="img"
-    aria-label="Level thermometer"
-    preserveAspectRatio="none"
-  >
-    <rect x="0" y="0" width={WIDTH} height={HEIGHT} rx="6" ry="6" fill="#f1f1f1" />
-    <g clip-path="inset(0 round 6px)">
-      {#each segments as seg (seg.categoryId)}
-        <rect x={seg.x} y={0} width={seg.width} height={HEIGHT} fill={seg.color} />
-      {/each}
-    </g>
-  </svg>
+  <div class="bar" role="img" aria-label="Level thermometer">
+    {#each segments as seg (seg.categoryId)}
+      <div
+        class="segment"
+        style:flex-grow={seg.points}
+        style:background={seg.color}
+        title={`${seg.label}: ${seg.points} pts`}
+      >
+        <span class="seg-label">{seg.points}</span>
+      </div>
+    {/each}
+    {#if remaining > 0}
+      <div class="segment rest" style:flex-grow={remaining} aria-hidden="true"></div>
+    {/if}
+  </div>
   <div class="progress">
     <span class="level">Level {$currentLevelStore || '—'}</span>
     <span class="points">{$totalPointsStore} / {$maxPointsStore} pts</span>
@@ -83,8 +74,39 @@
     gap: 10px;
   }
   .bar {
-    display: block;
-    height: 28px;
+    display: flex;
+    width: 100%;
+    height: 36px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f1f1f1;
+  }
+  .segment {
+    flex-basis: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    overflow: hidden;
+  }
+  .segment.rest {
+    background: transparent;
+  }
+  .seg-label {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+    white-space: nowrap;
+  }
+  /* hide point label when the segment is narrower than ~28px of render space */
+  .segment {
+    container-type: inline-size;
+  }
+  @container (max-width: 24px) {
+    .seg-label {
+      display: none;
+    }
   }
   .progress {
     display: flex;

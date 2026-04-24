@@ -11,6 +11,7 @@
   import Track from '$lib/components/Track.svelte';
   import KeyboardListener from '$lib/components/KeyboardListener.svelte';
 
+  import { get } from 'svelte/store';
   import { base } from '$app/paths';
   import { loadManifest } from '$lib/frameworks/manifest.js';
   import { loadFramework } from '$lib/frameworks/loader.js';
@@ -18,11 +19,13 @@
   import { selectFramework } from '$lib/stores/actions.js';
   import { name, title } from '$lib/stores/identity.js';
   import { milestones } from '$lib/stores/milestones.js';
+  import { eligibleTitlesStore } from '$lib/stores/derived.js';
   import { readInitialHash, readHashOnce, startHashSync } from '$lib/stores/hashSync.js';
 
   let loading = true;
   let error = '';
   let unsubscribe: (() => void) | null = null;
+  let unsubscribeTitle: (() => void) | null = null;
 
   onMount(() => {
     (async () => {
@@ -53,6 +56,16 @@
         }
 
         unsubscribe = startHashSync();
+
+        // Auto-snap title whenever the eligible list changes (e.g. user adjusts
+        // milestones and the current title is no longer valid for their points).
+        unsubscribeTitle = eligibleTitlesStore.subscribe((eligible) => {
+          if (eligible.length === 0) return;
+          const current = get(title);
+          if (!eligible.includes(current)) {
+            title.set(eligible[0]);
+          }
+        });
       } catch (err) {
         error = err instanceof Error ? err.message : String(err);
       } finally {
@@ -62,6 +75,7 @@
 
     return () => {
       if (unsubscribe) unsubscribe();
+      if (unsubscribeTitle) unsubscribeTitle();
     };
   });
 </script>
