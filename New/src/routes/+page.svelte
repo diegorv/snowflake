@@ -11,6 +11,7 @@
   import Track from '$lib/components/Track.svelte';
   import KeyboardListener from '$lib/components/KeyboardListener.svelte';
 
+  import { base } from '$app/paths';
   import { loadManifest } from '$lib/frameworks/manifest.js';
   import { loadFramework } from '$lib/frameworks/loader.js';
   import { frameworkManifest, currentFramework } from '$lib/stores/framework.js';
@@ -26,7 +27,13 @@
   onMount(() => {
     (async () => {
       try {
-        const manifest = await loadManifest();
+        const rawManifest = await loadManifest(fetch, `${base}/frameworks/index.json`);
+        const manifest = rawManifest.map((entry) => ({
+          ...entry,
+          path: entry.path.startsWith('http')
+            ? entry.path
+            : `${base}${entry.path.startsWith('/') ? '' : '/'}${entry.path}`
+        }));
         frameworkManifest.set(manifest);
 
         // Preload every manifest entry so hash decoding can find the referenced framework
