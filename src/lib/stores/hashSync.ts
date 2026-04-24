@@ -1,4 +1,4 @@
-import { derived, get } from 'svelte/store';
+import { derived } from 'svelte/store';
 import { decodeHash, encodeHash } from '../domain/hash.js';
 import { getRegistry } from '../frameworks/registry.js';
 import { currentFramework } from './framework.js';
@@ -44,18 +44,4 @@ export function startHashSync(): () => void {
 export function readInitialHash(): string {
   if (typeof window === 'undefined') return '';
   return window.location.hash;
-}
-
-export function currentEncodedHash(): string {
-  const framework = get(currentFramework);
-  if (!framework) return '';
-  return encodeHash(
-    {
-      frameworkId: framework.id,
-      milestones: get(milestones),
-      name: get(name),
-      title: get(title)
-    },
-    framework
-  );
 }
