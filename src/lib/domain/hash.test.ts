@@ -90,4 +90,10 @@ describe('hash codec', () => {
     expect(decoded?.milestones.T1).toBe(0);
     expect(decoded?.milestones.T2).toBe(2);
   });
+
+  it('does not throw on malformed percent-encoding', () => {
+    // A trailing lone `%` is a classic URL parser foot-gun. The function
+    // should never throw; at worst, return null or a best-effort decode.
+    expect(() => decodeHash('#f=test&m=1,2&n=%', registry)).not.toThrow();
+  });
 });
