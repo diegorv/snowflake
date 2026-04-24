@@ -88,7 +88,7 @@
         d: centerArc({} as never) ?? '',
         trackId: track.id,
         level: 0,
-        color: current === 0 ? colorMap.get(track.categoryId) ?? '#ccc' : '#f4f4f4',
+        color: colorMap.get(track.categoryId) ?? '#ccc',
         focused: track.id === $focusedTrackId && current === 0,
         rotation
       });
