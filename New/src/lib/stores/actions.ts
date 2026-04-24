@@ -6,8 +6,17 @@ import { loadFramework } from '../frameworks/loader.js';
 import { getFramework } from '../frameworks/registry.js';
 import { currentFramework, frameworkManifest } from './framework.js';
 import { focusedTrackId } from './focus.js';
-import { title } from './identity.js';
+import { name, title } from './identity.js';
 import { milestones } from './milestones.js';
+
+export function resetAll(): void {
+  const framework = get(currentFramework);
+  if (!framework) return;
+  milestones.set(emptyMilestones(framework));
+  name.set('');
+  focusedTrackId.set(framework.tracks[0].id);
+  // title auto-snaps via the eligibleTitlesStore subscription
+}
 
 export async function selectFramework(
   id: string,

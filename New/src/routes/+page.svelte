@@ -10,6 +10,7 @@
   import TrackSelector from '$lib/components/TrackSelector.svelte';
   import Track from '$lib/components/Track.svelte';
   import KeyboardListener from '$lib/components/KeyboardListener.svelte';
+  import ResetButton from '$lib/components/ResetButton.svelte';
 
   import { get } from 'svelte/store';
   import { base } from '$app/paths';
@@ -92,6 +93,7 @@
 {:else if $currentFramework}
   <div class="top">
     <FrameworkPicker />
+    <ResetButton />
   </div>
   <div class="layout">
     <div class="left">
@@ -112,6 +114,11 @@
 <style>
   .top {
     margin-bottom: 12px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
   }
   .layout {
     display: grid;
