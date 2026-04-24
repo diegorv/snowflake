@@ -25,6 +25,7 @@
 
   let loading = true;
   let error = '';
+  let warning = '';
   let unsubscribe: (() => void) | null = null;
   let unsubscribeTitle: (() => void) | null = null;
 
@@ -47,7 +48,24 @@
 
         // Preload every manifest entry so hash decoding can find the referenced framework
         // synchronously. Presets are small and there aren't many of them.
-        await Promise.all(manifest.map((entry) => loadFramework(entry).catch(() => null)));
+        const results = await Promise.all(
+          manifest.map((entry) =>
+            loadFramework(entry)
+              .then(() => ({ id: entry.id, ok: true as const }))
+              .catch((err) => {
+                console.warn(`Failed to preload framework "${entry.id}":`, err);
+                return { id: entry.id, ok: false as const };
+              })
+          )
+        );
+        const failed = new Set(results.filter((r) => !r.ok).map((r) => r.id));
+        if (failed.size > 0) {
+          warning = `Some frameworks failed to load: ${[...failed].join(', ')}. They won't appear in the picker.`;
+          frameworkManifest.set(manifest.filter((m) => !failed.has(m.id)));
+        }
+        if (get(frameworkManifest).length === 0) {
+          throw new Error('No frameworks could be loaded. Check your network and static/frameworks/*.json files.');
+        }
 
         const decoded = readHashOnce(readInitialHash());
         if (decoded) {
@@ -96,6 +114,9 @@
     <pre>{error}</pre>
   </div>
 {:else if $currentFramework}
+  {#if warning}
+    <div class="warning" role="status">{warning}</div>
+  {/if}
   <div class="top">
     <FrameworkPicker />
     <ResetButton />
@@ -145,6 +166,14 @@
     border: 1px solid #e88;
     padding: 12px;
     border-radius: 4px;
+  }
+  .warning {
+    background: #fff8dc;
+    border: 1px solid #e0c060;
+    padding: 10px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+    margin-bottom: 12px;
   }
   .error pre {
     white-space: pre-wrap;
