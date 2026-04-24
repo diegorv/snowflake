@@ -1,87 +1,530 @@
 {
-  "id": "example-small",
-  "displayName": "Example Small Team",
+  "id": "example",
+  "displayName": "Example",
   "categories": [
-    { "id": "tech", "label": "Technical", "color": "#2a9d8f" },
-    { "id": "people", "label": "People", "color": "#e76f51" }
+    {
+      "id": "A",
+      "label": "Technical Skill",
+      "color": "#00abc2"
+    },
+    {
+      "id": "B",
+      "label": "Get Stuff Done",
+      "color": "#428af6"
+    },
+    {
+      "id": "C",
+      "label": "Impact",
+      "color": "#e1439f"
+    },
+    {
+      "id": "D",
+      "label": "Communication & Leadership",
+      "color": "#e54552"
+    }
   ],
-  "milestonePoints": [0, 2, 5, 10],
+  "milestonePoints": [0, 1, 3, 6, 10, 15, 21, 28, 36],
   "pointsToLevels": [
-    { "minPoints": 0, "label": "Junior" },
-    { "minPoints": 8, "label": "Mid" },
-    { "minPoints": 20, "label": "Senior" }
+    { "minPoints": 0, "label": "IC3.1" },
+    { "minPoints": 4, "label": "IC3.2" },
+    { "minPoints": 8, "label": "IC3.3" },
+    { "minPoints": 13, "label": "IC4.1" },
+    { "minPoints": 17, "label": "IC4.2" },
+    { "minPoints": 21, "label": "IC4.3" },
+    { "minPoints": 25, "label": "IC5.1" },
+    { "minPoints": 30, "label": "IC5.2" },
+    { "minPoints": 35, "label": "IC5.3" },
+    { "minPoints": 41, "label": "IC6.1" },
+    { "minPoints": 47, "label": "IC6.2" },
+    { "minPoints": 54, "label": "IC6.3" },
+    { "minPoints": 61, "label": "E4.1" },
+    { "minPoints": 69, "label": "E4.2" },
+    { "minPoints": 77, "label": "E4.3" },
+    { "minPoints": 85, "label": "E5.1" },
+    { "minPoints": 94, "label": "E5.2" },
+    { "minPoints": 103, "label": "E5.3" },
+    { "minPoints": 113, "label": "E6.1" },
+    { "minPoints": 122, "label": "E6.2" },
+    { "minPoints": 131, "label": "E6.3" },
+    { "minPoints": 141, "label": "E7.1" }
   ],
   "titles": [
-    { "label": "Software Engineer", "minPoints": 0, "maxPoints": 19 },
-    { "label": "Senior Software Engineer", "minPoints": 20 }
+    { "label": "Associate Software Engineer", "minPoints": 0, "maxPoints": 12 },
+    { "label": "Software Engineer", "minPoints": 13, "maxPoints": 24 },
+    { "label": "Senior Software Engineer", "minPoints": 25, "maxPoints": 40 },
+    { "label": "Lead Software Engineer", "minPoints": 41, "maxPoints": 60 },
+    { "label": "Staff Software Engineer", "minPoints": 61, "maxPoints": 84 },
+    { "label": "Senior Staff Software Engineer", "minPoints": 85, "maxPoints": 112 },
+    { "label": "Principal Software Engineer", "minPoints": 113, "maxPoints": 140 },
+    { "label": "Distinguished Software Engineer", "minPoints": 141 }
   ],
   "tracks": [
     {
-      "id": "CODE_QUALITY",
-      "displayName": "Code quality",
-      "categoryId": "tech",
-      "description": "Writes correct, maintainable code with good tests",
+      "id": "TECHNICAL_SKILL",
+      "displayName": "Technical Skill",
+      "categoryId": "A",
+      "description": "Builds and applies engineering craft, ranging from core CS fundamentals through deep system architecture and industry-shaping innovation",
       "milestones": [
         {
-          "summary": "Writes readable code that works",
-          "signals": ["Uses meaningful names", "Writes unit tests for new code"],
-          "examples": ["Added tests for a bugfix", "Refactored a long function"]
+          "summary": "Builds a foundation in core engineering concepts and ramps up on the team's primary stack (IC3 - Associate Software Engineer)",
+          "signals": [
+            "Holds a working grasp of foundational computer science topics, including distributed systems vocabulary, functional programming patterns, and the CAP theorem, along with other concepts the team relies on day to day",
+            "Writes well-tested, idiomatic code and keeps side effects clearly separated from pure functional code",
+            "Picks up frequently used libraries and design patterns: producing and consuming message-queue events, leveraging existing design-system components, applying hexagonal architecture, and interacting with databases and HTTP APIs"
+          ],
+          "examples": [
+            "Walked through the team's onboarding doc and shipped a small first contribution end to end",
+            "Refactored a function during code review to separate I/O from pure logic",
+            "Added a new message-queue consumer following the squad's existing pattern"
+          ]
         },
         {
-          "summary": "Reviews others' code and keeps the codebase healthy",
-          "signals": ["Leaves useful review comments", "Refactors opportunistically"],
-          "examples": ["Caught a race condition in review", "Introduced a shared helper"]
+          "summary": "Writes correct, clean code with light supervision and grows reach across more than one area (IC4 - Software Engineer)",
+          "signals": [
+            "Produces correct, clean code with periodic guidance and reliably layers in unit, functional, and integration tests",
+            "Becomes self-sufficient in one substantial slice of the codebase or infrastructure (a cluster of microservices, a mobile product, or a meaningful frontend area) while keeping a working map of how neighbouring systems interact",
+            "Begins broadening into adjacent disciplines such as data, mobile, web, infrastructure, or distributed systems while continuing to deepen a primary specialization (T-shape or paint-drip model)",
+            "Contributes to shared libraries, platform tools, deployment pipelines, common rollout machinery, and design-system components",
+            "Navigates unfamiliar parts of the codebase with light guidance from the owners",
+            "Debugs methodically, driving toward root cause rather than relying on trial and error"
+          ],
+          "examples": [
+            "Took an unfamiliar service on call and resolved an incident by following the runbook",
+            "Opened a PR against a platform repository owned by another team",
+            "Reproduced a flaky bug deterministically before proposing a fix"
+          ]
         },
         {
-          "summary": "Sets technical standards across the codebase",
-          "signals": ["Authors style guides", "Drives migrations"],
-          "examples": ["Migrated the project to TypeScript", "Established a testing strategy"]
+          "summary": "Owns whole features end to end, makes informed architectural trade-offs, and is the go-to expert in one area (IC5 - Senior Software Engineer)",
+          "signals": [
+            "Demonstrates strong working knowledge of relevant infrastructure, service architectures, libraries, frameworks, and continuous-deployment systems",
+            "Reasons fluently about concurrency, multithreading, distributed systems, and microservice boundaries, and anticipates subtle failure modes before they reach production",
+            "Recognized as the expert in one area of the codebase or infrastructure while holding a clear mental model of the wider system",
+            "Performs and guides methodical, data-driven performance and scalability work",
+            "Notices and pushes back on unnecessary deviations from established patterns, improving consistency across the codebase",
+            "Justifies adding new technical surface area, such as platforms or infrastructure other engineers must learn, with concrete benefits rather than novelty, and aligns relevant stakeholders before introducing it"
+          ],
+          "examples": [
+            "Designed a caching strategy for a hot read path with documented latency and failure-mode trade-offs",
+            "Diagnosed a race condition spanning three services and authored the playbook for similar incidents",
+            "Vetoed a proposal to add a new database after running a benchmark showing the existing one would suffice"
+          ]
+        },
+        {
+          "summary": "Sought out for technical guidance across squads and demonstrates deep expertise in a domain or technology (IC6 - Lead Software Engineer)",
+          "signals": [
+            "Treated as the technical reference point on their squad and on adjacent ones, anticipating product-level technical issues and shaping architecture and design choices to head them off",
+            "Holds deep domain or technical expertise on par with subject-matter specialists, with the operational, debugging, and tuning skills that go well beyond a typical user of the technology",
+            "Conceives and creates abstractions, libraries, and tools whose usefulness extends well past the original problem that prompted them",
+            "Debugs the gnarliest issues the team encounters, especially those crossing project, service, and timing boundaries"
+          ],
+          "examples": [
+            "Designed a shared client library now used by five squads",
+            "Led the postmortem on a multi-service race condition that had blocked the team for two weeks",
+            "Brought in a domain expert to review a contract and pushed back on requirements based on technical realities"
+          ]
+        },
+        {
+          "summary": "Provides technical direction across multiple teams and ships horizontal platforms or major infrastructure (E4 - Staff Software Engineer)",
+          "signals": [
+            "Provides technical guidance across a broad swath of the system or as a recognized specialist in one of its core technologies",
+            "Picks up new areas and guides others fluently across large sections of the codebase",
+            "Shapes vertical domain architectures, delivers horizontal platforms, or ships complex libraries and major pieces of infrastructure"
+          ],
+          "examples": [
+            "Drove the design and rollout of a horizontal authorization platform consumed by every squad",
+            "Mentored leads from three different teams on architectural decisions that crossed system boundaries",
+            "Authored an RFC adopted across a business unit for handling cross-service idempotency"
+          ]
+        },
+        {
+          "summary": "Anticipates technical change at the company level and ties technical capabilities to business strategy (E5 - Senior Staff Software Engineer)",
+          "signals": [
+            "Anticipates broad technical change and scaling challenges, keeping the engineering organization ahead of the curve",
+            "Recognizes and reasons through trade-offs at the level of the whole system",
+            "Holds a deep, end-to-end mental model of the organization's architecture and articulates scaling and reliability limits holistically",
+            "Connects technical capabilities to product and service competitiveness in the market, combining technical and business intuition"
+          ],
+          "examples": [
+            "Authored a multi-year scaling roadmap covering reliability, throughput, and cost",
+            "Identified a class of architectural risk three quarters ahead of customer impact and led the mitigation work",
+            "Translated an ambiguous executive concern into a concrete platform investment thesis"
+          ]
+        },
+        {
+          "summary": "Creates abstractions, patterns, and tools with applicability beyond the company, and contributes credibly anywhere (E6 - Principal Software Engineer)",
+          "signals": [
+            "Creates and identifies abstractions, patterns, frameworks, and tools whose value extends to other developers and other companies in the same industry",
+            "Holds enough breadth to come up to speed and contribute meaningfully in essentially any technical area of the organization"
+          ],
+          "examples": [
+            "Authored a framework or specification adopted outside the organization",
+            "Joined a new domain and was producing high-leverage work within a single quarter",
+            "Identified a class of problem recurring across multiple business units and shipped a single abstraction that retired all of them"
+          ]
+        },
+        {
+          "summary": "Recognized industry-wide as a leading expert in or the creator of an area of specialty (E7 - Distinguished Software Engineer)",
+          "signals": [
+            "Easily recognizable as one of the world's leading experts in, or the creator of, their area of specialty"
+          ],
+          "examples": [
+            "Originated a widely adopted technology, paper, or industry technique",
+            "Recognized externally with awards, keynotes, or fellowship-level honors in the field",
+            "Sets technical direction that other companies and engineers explicitly follow"
+          ]
         }
       ]
     },
     {
-      "id": "SYSTEM_DESIGN",
-      "displayName": "System design",
-      "categoryId": "tech",
-      "description": "Designs systems that are correct, scalable and easy to operate",
+      "id": "GET_STUFF_DONE",
+      "displayName": "Get Stuff Done",
+      "categoryId": "B",
+      "description": "Translates ambiguous problems into shipped, observable outcomes through disciplined planning, execution, and operational ownership",
       "milestones": [
         {
-          "summary": "Understands existing systems well enough to extend them",
-          "signals": ["Reads docs before coding", "Asks good clarifying questions"],
-          "examples": ["Added a new endpoint to an existing service"]
+          "summary": "Builds productivity skills and ships well-defined tasks all the way to production (IC3 - Associate Software Engineer)",
+          "signals": [
+            "Develops productivity skills by learning the team's tooling, including source control, editors, the continuous deployment pipeline, logging, monitoring, and testing best practices",
+            "Takes well-defined tasks and delivers them all the way through to production, collaborating with teammates where needed",
+            "Holds practical, hands-on knowledge of how the team ships, including how services deploy, how the app is released, how to change a rollout, and how to read monitoring dashboards",
+            "Monitors services owned by the team across logs, dashboards, and other sources and reacts appropriately by taking on-call shifts, escalating, calling a crash, and debugging through to resolution"
+          ],
+          "examples": [
+            "Joined the on-call rotation and successfully handled a paging incident during the shift",
+            "Pushed a small change through CI/CD without manual hand-holding",
+            "Read a dashboard during an incident and identified the spiking metric"
+          ]
         },
         {
-          "summary": "Proposes and implements sound designs for new features",
-          "signals": ["Writes short design docs", "Considers failure modes"],
-          "examples": ["Designed a caching strategy for a hot path"]
+          "summary": "Makes steady progress on tasks, communicates assumptions early, and unblocks themselves and the team (IC4 - Software Engineer)",
+          "signals": [
+            "Makes steady, predictable progress and recognizes when to ask for help and when to offer it to keep the team unblocked",
+            "Understands the team's domain model and the business context surrounding it",
+            "Sidesteps bikeshedding and focuses energy on the parts of a problem with the most impact or risk",
+            "Surfaces assumptions and pushes for clarification on tasks before starting, reducing rework",
+            "Picks up issues proactively rather than waiting for work to be assigned"
+          ],
+          "examples": [
+            "Identified a missing requirement during sprint planning that would have caused rework",
+            "Volunteered to investigate a long-standing TODO when their primary work was blocked",
+            "Wrote a one-paragraph design note that surfaced an assumption the PM ultimately disagreed with"
+          ]
         },
         {
-          "summary": "Leads system-level design and architecture decisions",
-          "signals": ["Considers multi-team implications", "Drives consensus"],
-          "examples": ["Led a service extraction project"]
+          "summary": "De-risks design choices empirically, ships in well-staged milestones, and keeps the team's systems healthy (IC5 - Senior Software Engineer)",
+          "signals": [
+            "Backs significant design or architectural choices with empirical evidence such as proofs of concept, tests, and external research, given a clear product motivation",
+            "Drives small-to-medium features from technical design through one hundred percent rollout, including bug fixing and post-launch improvements",
+            "Breaks work into well-defined milestones rather than producing a single monolithic deliverable",
+            "Manages expectations with stakeholders along the way",
+            "Removes technical roadblocks for the team, such as fixing flaky pipelines, pruning noisy alerts, driving down exception volume, and adding analytical controls and monitoring",
+            "Owns system stability by ensuring testing and observability are in place, watching production behaviour, and reacting quickly to incidents"
+          ],
+          "examples": [
+            "Ran a two-week proof of concept that decided a contested architectural choice",
+            "Cut the team's pager volume in half over a quarter",
+            "Staged a feature behind feature flags and rolled it out in three controlled steps"
+          ]
+        },
+        {
+          "summary": "Reduces complexity, manages technical debt deliberately, and rolls out sensitive changes safely (IC6 - Lead Software Engineer)",
+          "signals": [
+            "Consistently reduces the complexity of projects, systems, and processes to get more done with less work, breaking up deliverables for early feedback and incremental business value",
+            "Spots accumulating technical debt and proactively influences the team to pay it down before it grows",
+            "Plans and rolls out changes through to completion with controlled, low impact on customers and downstream systems, partnering with PM, BA, and other roles as needed"
+          ],
+          "examples": [
+            "Killed a planned multi-quarter project by proposing a much smaller alternative that hit the same outcome",
+            "Authored and led a tech-debt initiative that landed in a single sprint and removed a chronic source of incidents",
+            "Coordinated a sensitive data migration with zero customer-visible impact"
+          ]
+        },
+        {
+          "summary": "Plans and executes highly sensitive cross-system changes and creates leadership opportunities for others (E4 - Staff Software Engineer)",
+          "signals": [
+            "Plans and rolls out highly sensitive system changes through to completion with controlled, low impact on customers and client systems, partnering with PM, BA, and other roles",
+            "Proactively identifies and starts projects to reshape architecture when preconditions have changed and the existing design no longer fits, extracting and documenting platforms as needed",
+            "Spots opportunities for engineers to take leadership on increasingly larger or more sensitive projects, partnering with managers to set them up for success"
+          ],
+          "examples": [
+            "Led a year-long migration spanning four squads with no major outage and a clear weekly burn-down",
+            "Identified that a mature platform should be extracted into its own service and led that extraction",
+            "Recommended an engineer for a tech-lead role on a high-stakes project and supported them through it"
+          ]
+        },
+        {
+          "summary": "Determines the most important technical risks and opportunities and drives waves of change to completion (E5 - Senior Staff Software Engineer)",
+          "signals": [
+            "Determines the organization's most important technical risks and opportunities and executes against them efficiently",
+            "Drives waves of technical change all the way through rollout, owning execution and not just vision",
+            "Builds architecture that keeps many futures open without requiring certainty about which one will arrive",
+            "Develops a pipeline of future staff engineers by spotting technical talent and providing focused mentorship"
+          ],
+          "examples": [
+            "Owned a company-wide technical initiative from kickoff through complete rollout across every squad",
+            "Architected a system whose core abstractions survived three product pivots",
+            "Mentored two engineers through promotion to staff over an eighteen-month period"
+          ]
+        },
+        {
+          "summary": "Produces a sustained stream of valuable software and balances community priorities with company outcomes (E6 - Principal Software Engineer)",
+          "signals": [
+            "Prolific producer of valuable open- and closed-source software",
+            "Balances broader community priorities against the company's success"
+          ],
+          "examples": [
+            "Maintains a project relied on across the organization and adopted externally",
+            "Negotiated a contribution to an external open-source project that solved an internal need",
+            "Made a principled call to prioritize an internal need over an external community ask and explained the reasoning publicly"
+          ]
+        },
+        {
+          "summary": "Holds broad visibility outside the company through invention, implementation, writing, and speaking (E7 - Distinguished Software Engineer)",
+          "signals": [
+            "Holds broad visibility outside the company via invention, implementation, writing, or speaking"
+          ],
+          "examples": [
+            "Delivered a keynote at a major industry conference",
+            "Authored a paper or article cited across the field",
+            "Built a tool used by engineering teams across the industry"
+          ]
         }
       ]
     },
     {
-      "id": "MENTORSHIP",
-      "displayName": "Mentorship",
-      "categoryId": "people",
-      "description": "Supports peers and helps them grow",
+      "id": "IMPACT",
+      "displayName": "Impact",
+      "categoryId": "C",
+      "description": "Drives business and technical outcomes whose value compounds across teams, products, and the broader engineering organization",
       "milestones": [
         {
-          "summary": "Shares knowledge with peers",
-          "signals": ["Pair programs", "Writes informal docs"],
-          "examples": ["Ran an onboarding session"]
+          "summary": "Focuses on growing as an engineer and on living the team's core values (IC3 - Associate Software Engineer)",
+          "signals": [
+            "Focuses energy on growing as an engineer, quickly absorbing existing tools, resources, and processes",
+            "Embodies the team's core values, putting effort into understanding and living them"
+          ],
+          "examples": [
+            "Came in with thoughtful questions during onboarding",
+            "Asked for and applied feedback after each shipped task",
+            "Volunteered for a values-related team initiative"
+          ]
         },
         {
-          "summary": "Actively mentors individuals",
-          "signals": ["Provides actionable feedback", "Helps unblock others"],
-          "examples": ["Mentored a junior through a feature"]
+          "summary": "Contributes to technical design and connects individual work to wider business impact (IC4 - Software Engineer)",
+          "signals": [
+            "Actively contributes to the technical design of features",
+            "Owns features end to end with growing complexity, from inception through production into post-launch monitoring",
+            "Reasons through and articulates well-considered design trade-offs in their area",
+            "Sees how individual contributions roll up into larger business impact and flags issues with requirements or customer requests early",
+            "Looks for ways to improve the design and code quality of the team's systems"
+          ],
+          "examples": [
+            "Caught a contradictory requirement in a spec before development started",
+            "Followed a feature into production and tracked the metrics it was meant to move",
+            "Refactored a long-standing piece of legacy code as part of regular feature work"
+          ]
         },
         {
-          "summary": "Shapes engineer growth across the team",
-          "signals": ["Defines growth plans", "Advocates for teammates"],
-          "examples": ["Ran a career framework workshop"]
+          "summary": "Partners cross-functionally, drives requirements that include all parties, and improves core platforms or critical logic (IC5 - Senior Software Engineer)",
+          "signals": [
+            "Partners with analysts, data scientists, designers, product peers, and other specialists to shape requirements that account for everyone's needs",
+            "Makes material improvements to core platform code or to critical business logic for the organization",
+            "Lets customer empathy guide decisions and avoids building things that do not solve real problems",
+            "Spots risks and problems in their own work and in others' work",
+            "Takes initiative to identify and solve important problems, coordinating with others on cross-cutting technical issues",
+            "Helps shape team objectives such as OKRs from an engineering perspective when relevant"
+          ],
+          "examples": [
+            "Reframed a feature spec after a working session with the analyst that exposed a missing data assumption",
+            "Proposed and led a refactor of a critical pricing component that paid off across squads",
+            "Owned an OKR jointly with the PM and brought engineering rigor to the metric definition"
+          ]
+        },
+        {
+          "summary": "Recognized as a prolific contributor; articulates trade-offs and creates sweeping system improvements (IC6 - Lead Software Engineer)",
+          "signals": [
+            "Recognized by business-unit technical leadership as a prolific contributor to core and side projects",
+            "Articulates the trade-offs between technical, analytical, and product needs, including efficiency versus thoroughness and taking on debt versus paying it down",
+            "Has a track record of sweeping improvements in stability, performance, clarity, and scalability across major systems",
+            "Has visibly improved several projects or teams"
+          ],
+          "examples": [
+            "Led a quarter-long initiative that reduced overall service latency by an order of magnitude",
+            "Wrote and presented a trade-off analysis that decided a contested cross-team direction",
+            "Joined a struggling project as a contributor and turned its trajectory around"
+          ]
+        },
+        {
+          "summary": "Operates as an engineering stakeholder at the BU level, multiplies team effectiveness, and shifts the organization's technical trajectory (E4 - Staff Software Engineer)",
+          "signals": [
+            "Acts as an engineering stakeholder at the business-unit level and consistently influences decision-making across multiple teams, with awareness of how those teams interact with other parts of the business",
+            "Multiplies others' effectiveness by aligning teams on a platform vision and creating building blocks that unlock faster, better future deliveries",
+            "Has visibly shifted the organization's overall technical trajectory"
+          ],
+          "examples": [
+            "Sat in business-unit leadership planning and represented engineering interests through to the final plan",
+            "Authored a platform vision document that aligned three squads on a year of work",
+            "Built or championed a foundational system whose absence would now be unimaginable"
+          ]
+        },
+        {
+          "summary": "Drives multi-year strategy across critical business areas and serves as a role model and force multiplier for the org (E5 - Senior Staff Software Engineer)",
+          "signals": [
+            "Plays a key role in shaping a multi-year technology strategy for entire critical areas of the business spanning multiple systems and teams",
+            "Decisions made directly affect the long-term success or failure of the organization",
+            "Seen as a role model and mentor by many technical members of the team",
+            "Acts primarily as a multiplier through systems built, tools authored, or policies and patterns introduced that lift the productivity of the entire org"
+          ],
+          "examples": [
+            "Co-authored a three-year technology strategy adopted by senior leadership",
+            "Mentored a cohort of senior engineers, several of whom went on to staff roles",
+            "Introduced a process or pattern, such as a design-doc culture or RFC review, that the entire org now uses"
+          ]
+        },
+        {
+          "summary": "Directly and quantifiably moves the business and contributes substantially to influential open-source projects (E6 - Principal Software Engineer)",
+          "signals": [
+            "Directly and quantifiably impacts the business as a whole",
+            "Consistently produces significant contributions to influential open-source projects that shape the broader software industry"
+          ],
+          "examples": [
+            "Delivered an initiative whose business impact appeared on a leadership scorecard",
+            "Maintains or core-contributes to a widely used open-source project",
+            "Created a piece of internal infrastructure later released as open source and adopted broadly"
+          ]
+        },
+        {
+          "summary": "Influences technical direction beyond the company and shapes its global reputation (E7 - Distinguished Software Engineer)",
+          "signals": [
+            "Influences technical direction beyond the organization itself",
+            "Plays a critical role in establishing the organization's reputation as one of the well-known global technology companies"
+          ],
+          "examples": [
+            "Sets technical direction that other companies follow",
+            "Repeatedly invited to shape industry standards or working groups",
+            "Drives initiatives that materially elevate the organization's external technical brand"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "COMMUNICATION_LEADERSHIP",
+      "displayName": "Communication & Leadership",
+      "categoryId": "D",
+      "description": "Influences peers, partners, and leaders through clear writing, productive collaboration, mentorship, and a trusted technical voice",
+      "milestones": [
+        {
+          "summary": "Collaborates effectively, asks for help well, and practices egoless programming (IC3 - Associate Software Engineer)",
+          "signals": [
+            "Collaborates effectively with the team by pairing, asking for help, communicating status and blockers, and contributing to the continuous improvement of team processes",
+            "Practices egoless programming, accepts feedback graciously, and looks for opportunities to pair and mob with others"
+          ],
+          "examples": [
+            "Asked for help quickly when stuck rather than spinning silently",
+            "Took critical code-review feedback gracefully and reflected it in the next PR",
+            "Joined a mob session and contributed instead of just observing"
+          ]
+        },
+        {
+          "summary": "Drives small-to-medium features, gives helpful feedback, and mentors newer teammates (IC4 - Software Engineer)",
+          "signals": [
+            "Collaborates to drive small-to-medium features from technical design through completion",
+            "Gives timely, helpful feedback to peers and managers",
+            "Makes progress without needing repeated significant rework or oversight",
+            "Persistent in the face of roadblocks, dispatching them efficiently and pulling others in when needed, and works with minimal supervision",
+            "Proactively asks others for feedback and is eager to find ways to improve",
+            "Communicates technical decisions and outcomes visibly through design docs, tech talks, demos, or similar artifacts",
+            "Mentors more junior or newer engineers via pairing, mobbing, design review, and code review, and reviews the team's relevant pull requests",
+            "Helps with at least one of recruiting, interviewing, onboarding, documentation, open source, remote work, conferences, or blog posts"
+          ],
+          "examples": [
+            "Wrote a clear design doc that became the spec for a feature the whole team built",
+            "Onboarded a new hire and walked them through their first PRs",
+            "Volunteered to interview candidates and gave thoughtful written feedback"
+          ]
+        },
+        {
+          "summary": "Communicates effectively across functions, pushes back constructively, and multiplies others through teaching (IC5 - Senior Software Engineer)",
+          "signals": [
+            "Communicates effectively across functions inside the team, interacts productively with adjacent disciplines, and partners with leaders across their scope",
+            "Proactively flags problems with requirements, such as lack of clarity, inconsistencies, or technical limits, and helps course-correct early; understands what is meant beyond what is literally said when interacting with other functions; participates in product discussions",
+            "Disagrees constructively and pushes back when needed, including with more senior or tenured colleagues",
+            "Proactively seeks constructive criticism on design and architecture from teammates and other engineers",
+            "Masters whiteboarding and documentation techniques to convey ideas efficiently to other engineers, and judges when those artifacts should be durable and shared",
+            "Multiplies team impact by making others better through code reviews, whiteboarding, technical guidance, mentoring, tech talks, and training, and is enjoyable to collaborate with in those settings",
+            "Participates in the continuous improvement of discipline-wide processes such as recruiting, hiring, onboarding, documentation, open source, and remote work"
+          ],
+          "examples": [
+            "Pushed back on a feature scope decision in a product review and proposed a smaller alternative the team adopted",
+            "Ran a brown-bag tech talk that the discipline still references months later",
+            "Refactored the discipline's onboarding document based on what new hires were stumbling on"
+          ]
+        },
+        {
+          "summary": "Engineering stakeholder at team level, frequently consulted across squads, and guides architectural conversations (IC6 - Lead Software Engineer)",
+          "signals": [
+            "Acts as an engineering stakeholder at the team level and consistently influences decision-making across adjacent teams, participating actively in product discussions",
+            "Frequently asked into architecture reviews and provides feedback on projects outside their core area",
+            "Guides the architecture of a subdomain of the system and facilitates discussions that help their team and neighbours ship complex projects",
+            "Contributes both to non-engineer-facing technical documentation, so partners can understand what the system does at a high level, and to lower-level engineer-facing documentation that flows out of whiteboarding and technical discussions",
+            "Multiplies the effectiveness of others by facilitating cross-team work or accelerating knowledge transfer through documentation, tutorials, or talks",
+            "Listens to and guides technical debates toward consensus, regularly framing the conversation one level of abstraction above the immediate problem"
+          ],
+          "examples": [
+            "Chaired the architecture review for an inter-team project and produced a clear written outcome",
+            "Wrote the canonical 'how this subdomain works' document referenced by every onboarding engineer",
+            "Helped two squads converge on a shared API after a stalled debate"
+          ]
+        },
+        {
+          "summary": "Engineering stakeholder at BU level, sought out for big project assessments, and sets 6 to 12 month technical direction (E4 - Staff Software Engineer)",
+          "signals": [
+            "Acts as an engineering stakeholder at the business-unit level and consistently influences decision-making across multiple teams, with a clear understanding of how the BU interacts with other parts of the organization",
+            "Frequently asked to assess the technical challenges of large projects and to participate in product and business decisions alongside leaders from other disciplines",
+            "Leads and participates in tech forums, identifying problems that affect multiple teams and creating alignment across the engineering org",
+            "Sets short- and medium-term strategic technical direction, looking six to twelve months ahead to identify the areas of greatest need and producing concrete plans to address them"
+          ],
+          "examples": [
+            "Co-led a business-unit technology forum that produced a quarterly engineering roadmap",
+            "Wrote a twelve-month plan for paying down a class of architectural risk and drove it through to delivery",
+            "Was the engineering signatory on a cross-functional initiative that crossed BU boundaries"
+          ]
+        },
+        {
+          "summary": "Builds the engineering brand externally, leads internal direction-setting, and earns executive trust (E5 - Senior Staff Software Engineer)",
+          "signals": [
+            "Builds the engineering brand externally through talks and blog posts, identifying which areas can be shared effectively with the outside world and shaping the resulting content and communication",
+            "Leads internal conversations about the direction of major technology areas, drives wide consensus on adoption, and uses that direction to inspire engineers",
+            "Holds productive conversations with executives, cutting through jargon and information asymmetry to inspire trust and confidence"
+          ],
+          "examples": [
+            "Delivered a conference talk that became the headline external example of the engineering org's work",
+            "Drove company-wide alignment on a major technology direction through a series of open conversations",
+            "Briefed the executive team on a complex technical topic and earned approval for a sizeable investment"
+          ]
+        },
+        {
+          "summary": "Communicates with skill across every audience and adjusts style fluidly to context (E6 - Principal Software Engineer)",
+          "signals": [
+            "Excellent communicator across all audiences, adjusting style and depth to the audience and the situation"
+          ],
+          "examples": [
+            "Delivered the same complex idea credibly to engineers, executives, and customers in a single week",
+            "Authored a public-facing piece referenced inside and outside the organization",
+            "Mediated a high-stakes alignment meeting between leaders with conflicting priorities"
+          ]
+        },
+        {
+          "summary": "Helps engineers at every level become better and is widely valued for advice and mentorship (E7 - Distinguished Software Engineer)",
+          "signals": [
+            "Helps engineers at every level become better and is widely valued for advice and mentorship"
+          ],
+          "examples": [
+            "Sought out by engineers across many teams for career and technical advice",
+            "Mentored multiple staff and principal engineers through their careers",
+            "Asked to participate in critical hiring and leveling decisions throughout the organization"
+          ]
         }
       ]
     }
