@@ -30,5 +30,15 @@
     padding: 8px 10px;
     border-radius: 4px;
     min-width: 200px;
+    max-width: 100%;
+  }
+  @media (max-width: 480px) {
+    label {
+      width: 100%;
+    }
+    select {
+      min-width: 0;
+      width: 100%;
+    }
   }
 </style>
