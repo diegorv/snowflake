@@ -18,6 +18,7 @@
     key: string;
     d: string;
     trackId: string;
+    trackName: string;
     level: number;
     color: string;
     focused: boolean;
@@ -64,6 +65,7 @@
           key: `${track.id}-${level}`,
           d: levelArc({ level }) ?? '',
           trackId: track.id,
+          trackName: track.displayName,
           level,
           color: filled ? colorMap.get(track.categoryId) ?? '#ccc' : '#e5e5e5',
           focused: track.id === $focusedTrackId && current === level,
@@ -87,6 +89,7 @@
         key: `${track.id}-0`,
         d: centerArc({} as never) ?? '',
         trackId: track.id,
+        trackName: track.displayName,
         level: 0,
         color: colorMap.get(track.categoryId) ?? '#ccc',
         focused: track.id === $focusedTrackId && current === 0,
@@ -111,35 +114,45 @@
 </script>
 
 {#if $currentFramework}
-  <svg viewBox={`0 0 ${SIZE} ${SIZE}`} class="chart" aria-label="Nightingale radar" preserveAspectRatio="xMidYMid meet">
+  <svg viewBox={`0 0 ${SIZE} ${SIZE}`} class="chart" role="group" aria-label="Nightingale radar" preserveAspectRatio="xMidYMid meet">
     <g transform={`translate(${CENTER},${CENTER}) rotate(${rotationOffset})`}>
       {#each centerSlices as slice (slice.key)}
-        <path
-          d={slice.d}
-          transform={`rotate(${slice.rotation})`}
-          fill={slice.color}
-          stroke={slice.focused ? '#000' : '#fff'}
-          stroke-width={slice.focused ? 3 : 1}
+        <g
+          class="slice"
+          role="button"
+          tabindex="0"
+          aria-label={`${slice.trackName}: set to milestone 0`}
           on:click={() => onSliceClick(slice.trackId, 0)}
           on:keydown={(e) => onSliceKey(e, slice.trackId, 0)}
-          role="button"
-          aria-label={`Set ${slice.trackId} to milestone 0`}
-          tabindex="0"
-        />
+        >
+          <title>{slice.trackName}: milestone 0</title>
+          <path
+            d={slice.d}
+            transform={`rotate(${slice.rotation})`}
+            fill={slice.color}
+            stroke={slice.focused ? '#000' : '#fff'}
+            stroke-width={slice.focused ? 3 : 1}
+          />
+        </g>
       {/each}
       {#each levelSlices as slice (slice.key)}
-        <path
-          d={slice.d}
-          transform={`rotate(${slice.rotation})`}
-          fill={slice.color}
-          stroke={slice.focused ? '#000' : '#fff'}
-          stroke-width={slice.focused ? 3 : 1}
+        <g
+          class="slice"
+          role="button"
+          tabindex="0"
+          aria-label={`${slice.trackName}: set to milestone ${slice.level}`}
           on:click={() => onSliceClick(slice.trackId, slice.level)}
           on:keydown={(e) => onSliceKey(e, slice.trackId, slice.level)}
-          role="button"
-          aria-label={`Set ${slice.trackId} to milestone ${slice.level}`}
-          tabindex="0"
-        />
+        >
+          <title>{slice.trackName}: milestone {slice.level}</title>
+          <path
+            d={slice.d}
+            transform={`rotate(${slice.rotation})`}
+            fill={slice.color}
+            stroke={slice.focused ? '#000' : '#fff'}
+            stroke-width={slice.focused ? 3 : 1}
+          />
+        </g>
       {/each}
     </g>
   </svg>
@@ -153,16 +166,18 @@
     height: auto;
     margin: 0 auto;
   }
-  path {
+  .slice {
     cursor: pointer;
-    transition: fill 120ms ease;
     outline: none;
     -webkit-tap-highlight-color: transparent;
   }
-  path:hover {
+  .slice path {
+    transition: fill 120ms ease;
+  }
+  .slice:hover path {
     stroke: #000;
   }
-  path:focus-visible {
+  .slice:focus-visible path {
     stroke: #000;
     stroke-width: 3;
   }
