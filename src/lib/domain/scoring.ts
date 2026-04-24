@@ -6,7 +6,9 @@ export function milestoneToPoints(framework: Framework, level: number): number {
 }
 
 export function maxMilestoneLevel(framework: Framework): number {
-  return framework.tracks[0].milestones.length;
+  // Schema guarantees tracks.length >= 1, but be defensive so this never
+  // throws if callers pass a partially-constructed framework.
+  return framework.tracks[0]?.milestones.length ?? 0;
 }
 
 export function totalPoints(framework: Framework, milestones: MilestoneMap): number {
