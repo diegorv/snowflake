@@ -32,6 +32,11 @@
     (async () => {
       try {
         const rawManifest = await loadManifest(fetch, `${base}/frameworks/index.json`);
+        if (rawManifest.length === 0) {
+          throw new Error(
+            'No frameworks configured. Add at least one entry to static/frameworks/index.json.'
+          );
+        }
         const manifest = rawManifest.map((entry) => ({
           ...entry,
           path: entry.path.startsWith('http')
