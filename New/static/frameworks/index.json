@@ -1,0 +1,4 @@
+[
+  { "id": "medium", "label": "Medium (legacy)", "path": "/frameworks/medium.json" },
+  { "id": "example-small", "label": "Example (small)", "path": "/frameworks/example-small.json" }
+]
