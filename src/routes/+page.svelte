@@ -12,84 +12,25 @@
   import KeyboardListener from '$lib/components/KeyboardListener.svelte';
   import ResetButton from '$lib/components/ResetButton.svelte';
 
-  import { get } from 'svelte/store';
   import { base } from '$app/paths';
-  import { loadManifest } from '$lib/frameworks/manifest.js';
-  import { loadFramework } from '$lib/frameworks/loader.js';
-  import { frameworkManifest, currentFramework } from '$lib/stores/framework.js';
-  import { selectFramework } from '$lib/stores/actions.js';
-  import { name, title } from '$lib/stores/identity.js';
-  import { milestones } from '$lib/stores/milestones.js';
-  import { eligibleTitlesStore } from '$lib/stores/derived.js';
-  import { readInitialHash, readHashOnce, startHashSync } from '$lib/stores/hashSync.js';
+  import { currentFramework } from '$lib/stores/framework.js';
+  import { bootApp } from '$lib/stores/boot.js';
 
   let loading = true;
   let error = '';
   let warning = '';
-  let unsubscribe: (() => void) | null = null;
-  let unsubscribeTitle: (() => void) | null = null;
+  let teardown: (() => void) | null = null;
 
   onMount(() => {
     (async () => {
       try {
-        const rawManifest = await loadManifest(fetch, `${base}/frameworks/index.json`);
-        if (rawManifest.length === 0) {
-          throw new Error(
-            'No frameworks configured. Add at least one entry to static/frameworks/index.json.'
-          );
+        const result = await bootApp({ fetch, base });
+        teardown = result.teardown;
+        if (result.failedIds.length > 0) {
+          warning = `Some frameworks failed to load: ${result.failedIds.join(
+            ', '
+          )}. They won't appear in the picker.`;
         }
-        const manifest = rawManifest.map((entry) => ({
-          ...entry,
-          path: entry.path.startsWith('http')
-            ? entry.path
-            : `${base}${entry.path.startsWith('/') ? '' : '/'}${entry.path}`
-        }));
-        frameworkManifest.set(manifest);
-
-        // Preload every manifest entry so hash decoding can find the referenced framework
-        // synchronously. Presets are small and there aren't many of them.
-        const results = await Promise.all(
-          manifest.map((entry) =>
-            loadFramework(entry)
-              .then(() => ({ id: entry.id, ok: true as const }))
-              .catch((err) => {
-                console.warn(`Failed to preload framework "${entry.id}":`, err);
-                return { id: entry.id, ok: false as const };
-              })
-          )
-        );
-        const failed = new Set(results.filter((r) => !r.ok).map((r) => r.id));
-        if (failed.size > 0) {
-          warning = `Some frameworks failed to load: ${[...failed].join(', ')}. They won't appear in the picker.`;
-          frameworkManifest.set(manifest.filter((m) => !failed.has(m.id)));
-        }
-        if (get(frameworkManifest).length === 0) {
-          throw new Error('No frameworks could be loaded. Check your network and static/frameworks/*.json files.');
-        }
-
-        const decoded = readHashOnce(readInitialHash());
-        if (decoded) {
-          name.set(decoded.name);
-          title.set(decoded.title);
-          await selectFramework(decoded.frameworkId, decoded.milestones);
-          // selectFramework overwrites title. If the hash's title is still eligible,
-          // restore it; otherwise leave whatever selectFramework picked.
-          if (decoded.title) title.set(decoded.title);
-        } else {
-          await selectFramework(manifest[0].id);
-        }
-
-        unsubscribe = startHashSync();
-
-        // Auto-snap title whenever the eligible list changes (e.g. user adjusts
-        // milestones and the current title is no longer valid for their points).
-        unsubscribeTitle = eligibleTitlesStore.subscribe((eligible) => {
-          if (eligible.length === 0) return;
-          const current = get(title);
-          if (!eligible.includes(current)) {
-            title.set(eligible[0]);
-          }
-        });
       } catch (err) {
         error = err instanceof Error ? err.message : String(err);
       } finally {
@@ -98,8 +39,7 @@
     })();
 
     return () => {
-      if (unsubscribe) unsubscribe();
-      if (unsubscribeTitle) unsubscribeTitle();
+      if (teardown) teardown();
     };
   });
 </script>
@@ -167,6 +107,11 @@
     padding: 12px;
     border-radius: 4px;
   }
+  .error pre {
+    white-space: pre-wrap;
+    font-family: monospace;
+    font-size: 13px;
+  }
   .warning {
     background: #fff8dc;
     border: 1px solid #e0c060;
@@ -174,11 +119,6 @@
     border-radius: 4px;
     font-size: 13px;
     margin-bottom: 12px;
-  }
-  .error pre {
-    white-space: pre-wrap;
-    font-family: monospace;
-    font-size: 13px;
   }
 
   @media (max-width: 800px) {
