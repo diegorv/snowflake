@@ -3,6 +3,5 @@
   { "id": "example-small", "label": "Example (small)", "path": "/frameworks/example-small.json" },
   { "id": "basecamp", "label": "Basecamp", "path": "/frameworks/basecamp.json" },
   { "id": "envoy", "label": "Envoy", "path": "/frameworks/envoy.json" },
-  { "id": "financial-times", "label": "Financial Times", "path": "/frameworks/financial-times.json" },
-  { "id": "meetup-makers", "label": "Meetup (Makers)", "path": "/frameworks/meetup-makers.json" }
+  { "id": "financial-times", "label": "Financial Times", "path": "/frameworks/financial-times.json" }
 ]
