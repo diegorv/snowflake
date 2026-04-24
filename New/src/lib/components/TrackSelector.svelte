@@ -55,6 +55,16 @@
     text-align: center;
     scroll-snap-align: start;
     min-height: 72px;
+    color: #111;
+    font: inherit;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .cell:focus {
+    outline: none;
+  }
+  .cell:focus-visible {
+    outline: 2px solid #000;
+    outline-offset: 1px;
   }
   .cell.focused {
     border-width: 3px;

@@ -17,9 +17,13 @@
     font-family: Helvetica, Arial, sans-serif;
     color: #111;
     background: #fff;
+    -webkit-tap-highlight-color: transparent;
   }
   :global(*) {
     box-sizing: border-box;
+  }
+  :global(button) {
+    font-family: inherit;
   }
   .chrome {
     max-width: 960px;

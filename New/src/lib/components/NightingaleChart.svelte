@@ -156,8 +156,14 @@
   path {
     cursor: pointer;
     transition: fill 120ms ease;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
   }
   path:hover {
     stroke: #000;
+  }
+  path:focus-visible {
+    stroke: #000;
+    stroke-width: 3;
   }
 </style>

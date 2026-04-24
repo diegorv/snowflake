@@ -89,6 +89,16 @@
     font-weight: 600;
     background: #eee;
     cursor: pointer;
+    color: #111;
+    font-family: inherit;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .level:focus {
+    outline: none;
+  }
+  .level:focus-visible {
+    outline: 2px solid #000;
+    outline-offset: 1px;
   }
   .level.met {
     color: #fff;
