@@ -63,14 +63,25 @@
 <style>
   section {
     margin-top: 12px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
   }
   h2 {
     margin: 0;
     font-size: 24px;
+    overflow-wrap: break-word;
   }
   .description {
     color: #555;
     margin: 4px 0 12px;
+    overflow-wrap: break-word;
+  }
+  .detail ul {
+    padding-left: 20px;
+  }
+  .detail li {
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
   .picker {
     display: flex;
