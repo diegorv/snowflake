@@ -27,7 +27,13 @@ export function decodeHash(
   const clean = hash.startsWith('#') ? hash.slice(1) : hash;
   if (!clean) return null;
 
-  const params = new URLSearchParams(clean);
+  let params: URLSearchParams;
+  try {
+    params = new URLSearchParams(clean);
+  } catch {
+    return null;
+  }
+
   const frameworkId = params.get('f');
   if (!frameworkId) return null;
 

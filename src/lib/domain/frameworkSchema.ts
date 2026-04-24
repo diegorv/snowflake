@@ -11,45 +11,57 @@ export class FrameworkValidationError extends Error {
   }
 }
 
+// Upper bounds are deliberately permissive but finite, so a malicious or
+// accidentally-huge preset (e.g. 10 000 signals per milestone) cannot DoS
+// rendering or balloon memory when loaded.
+const MAX_SIGNALS = 50;
+const MAX_EXAMPLES = 50;
+const MAX_MILESTONES = 20;
+const MAX_TRACKS = 64;
+const MAX_CATEGORIES = 16;
+const MAX_LEVELS = 64;
+const MAX_TITLES = 32;
+const MAX_STRING = 2000;
+
 const CategorySchema = z.object({
-  id: z.string().min(1),
-  label: z.string().min(1),
-  color: z.string().min(1)
+  id: z.string().min(1).max(64),
+  label: z.string().min(1).max(120),
+  color: z.string().min(1).max(32)
 });
 
 const MilestoneSchema = z.object({
-  summary: z.string(),
-  signals: z.array(z.string()),
-  examples: z.array(z.string())
+  summary: z.string().max(MAX_STRING),
+  signals: z.array(z.string().max(MAX_STRING)).max(MAX_SIGNALS),
+  examples: z.array(z.string().max(MAX_STRING)).max(MAX_EXAMPLES)
 });
 
 const TrackSchema = z.object({
-  id: z.string().min(1),
-  displayName: z.string().min(1),
-  categoryId: z.string().min(1),
-  description: z.string(),
-  milestones: z.array(MilestoneSchema).min(1)
+  id: z.string().min(1).max(64),
+  displayName: z.string().min(1).max(120),
+  categoryId: z.string().min(1).max(64),
+  description: z.string().max(MAX_STRING),
+  milestones: z.array(MilestoneSchema).min(1).max(MAX_MILESTONES)
 });
 
 const LevelThresholdSchema = z.object({
   minPoints: z.number().int().nonnegative(),
-  label: z.string().min(1)
+  label: z.string().min(1).max(64)
 });
 
 const TitleSchema = z.object({
-  label: z.string().min(1),
+  label: z.string().min(1).max(120),
   minPoints: z.number().int().nonnegative(),
   maxPoints: z.number().int().nonnegative().optional()
 });
 
 export const FrameworkSchema = z.object({
-  id: z.string().min(1),
-  displayName: z.string().min(1),
-  categories: z.array(CategorySchema).min(1),
-  tracks: z.array(TrackSchema).min(1),
-  milestonePoints: z.array(z.number().nonnegative()).min(2),
-  pointsToLevels: z.array(LevelThresholdSchema).min(1),
-  titles: z.array(TitleSchema).min(1)
+  id: z.string().min(1).max(64),
+  displayName: z.string().min(1).max(120),
+  categories: z.array(CategorySchema).min(1).max(MAX_CATEGORIES),
+  tracks: z.array(TrackSchema).min(1).max(MAX_TRACKS),
+  milestonePoints: z.array(z.number().nonnegative()).min(2).max(MAX_MILESTONES + 1),
+  pointsToLevels: z.array(LevelThresholdSchema).min(1).max(MAX_LEVELS),
+  titles: z.array(TitleSchema).min(1).max(MAX_TITLES)
 });
 
 function collectSemanticIssues(f: z.infer<typeof FrameworkSchema>): string[] {

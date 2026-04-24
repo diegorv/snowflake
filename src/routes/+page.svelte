@@ -12,61 +12,25 @@
   import KeyboardListener from '$lib/components/KeyboardListener.svelte';
   import ResetButton from '$lib/components/ResetButton.svelte';
 
-  import { get } from 'svelte/store';
   import { base } from '$app/paths';
-  import { loadManifest } from '$lib/frameworks/manifest.js';
-  import { loadFramework } from '$lib/frameworks/loader.js';
-  import { frameworkManifest, currentFramework } from '$lib/stores/framework.js';
-  import { selectFramework } from '$lib/stores/actions.js';
-  import { name, title } from '$lib/stores/identity.js';
-  import { milestones } from '$lib/stores/milestones.js';
-  import { eligibleTitlesStore } from '$lib/stores/derived.js';
-  import { readInitialHash, readHashOnce, startHashSync } from '$lib/stores/hashSync.js';
+  import { currentFramework } from '$lib/stores/framework.js';
+  import { bootApp } from '$lib/stores/boot.js';
 
   let loading = true;
   let error = '';
-  let unsubscribe: (() => void) | null = null;
-  let unsubscribeTitle: (() => void) | null = null;
+  let warning = '';
+  let teardown: (() => void) | null = null;
 
   onMount(() => {
     (async () => {
       try {
-        const rawManifest = await loadManifest(fetch, `${base}/frameworks/index.json`);
-        const manifest = rawManifest.map((entry) => ({
-          ...entry,
-          path: entry.path.startsWith('http')
-            ? entry.path
-            : `${base}${entry.path.startsWith('/') ? '' : '/'}${entry.path}`
-        }));
-        frameworkManifest.set(manifest);
-
-        // Preload every manifest entry so hash decoding can find the referenced framework
-        // synchronously. Presets are small and there aren't many of them.
-        await Promise.all(manifest.map((entry) => loadFramework(entry).catch(() => null)));
-
-        const decoded = readHashOnce(readInitialHash());
-        if (decoded) {
-          name.set(decoded.name);
-          title.set(decoded.title);
-          await selectFramework(decoded.frameworkId, decoded.milestones);
-          // selectFramework overwrites title. If the hash's title is still eligible,
-          // restore it; otherwise leave whatever selectFramework picked.
-          if (decoded.title) title.set(decoded.title);
-        } else {
-          await selectFramework(manifest[0].id);
+        const result = await bootApp({ fetch, base });
+        teardown = result.teardown;
+        if (result.failedIds.length > 0) {
+          warning = `Some frameworks failed to load: ${result.failedIds.join(
+            ', '
+          )}. They won't appear in the picker.`;
         }
-
-        unsubscribe = startHashSync();
-
-        // Auto-snap title whenever the eligible list changes (e.g. user adjusts
-        // milestones and the current title is no longer valid for their points).
-        unsubscribeTitle = eligibleTitlesStore.subscribe((eligible) => {
-          if (eligible.length === 0) return;
-          const current = get(title);
-          if (!eligible.includes(current)) {
-            title.set(eligible[0]);
-          }
-        });
       } catch (err) {
         error = err instanceof Error ? err.message : String(err);
       } finally {
@@ -75,8 +39,7 @@
     })();
 
     return () => {
-      if (unsubscribe) unsubscribe();
-      if (unsubscribeTitle) unsubscribeTitle();
+      if (teardown) teardown();
     };
   });
 </script>
@@ -91,6 +54,9 @@
     <pre>{error}</pre>
   </div>
 {:else if $currentFramework}
+  {#if warning}
+    <div class="warning" role="status">{warning}</div>
+  {/if}
   <div class="top">
     <FrameworkPicker />
     <ResetButton />
@@ -145,6 +111,14 @@
     white-space: pre-wrap;
     font-family: monospace;
     font-size: 13px;
+  }
+  .warning {
+    background: #fff8dc;
+    border: 1px solid #e0c060;
+    padding: 10px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+    margin-bottom: 12px;
   }
 
   @media (max-width: 800px) {

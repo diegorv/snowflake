@@ -34,8 +34,16 @@
   $: remaining = Math.max(0, ($maxPointsStore || 0) - ($totalPointsStore || 0));
 </script>
 
-<div class="thermometer" aria-label="Level progress">
-  <div class="bar" role="img" aria-label="Level thermometer">
+<div class="thermometer">
+  <div
+    class="bar"
+    role="progressbar"
+    aria-label="Level progress"
+    aria-valuemin="0"
+    aria-valuemax={$maxPointsStore || 0}
+    aria-valuenow={$totalPointsStore || 0}
+    aria-valuetext={`${$totalPointsStore} of ${$maxPointsStore} points, level ${$currentLevelStore || '—'}`}
+  >
     {#each segments as seg (seg.categoryId)}
       <div
         class="segment"
