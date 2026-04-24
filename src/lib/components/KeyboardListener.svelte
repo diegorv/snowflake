@@ -6,7 +6,13 @@
 
   function onKeyDown(event: KeyboardEvent) {
     const target = event.target as HTMLElement | null;
-    if (target && ['INPUT', 'TEXTAREA', 'SELECT'].includes(target.tagName)) return;
+    if (target) {
+      if (['INPUT', 'TEXTAREA', 'SELECT'].includes(target.tagName)) return;
+      if (target.isContentEditable) return;
+      if (typeof target.closest === 'function' && target.closest('[contenteditable="true"]')) return;
+    }
+    // Do not hijack browser/OS shortcuts that happen to include arrow keys.
+    if (event.altKey || event.ctrlKey || event.metaKey) return;
 
     switch (event.key) {
       case 'ArrowUp':
