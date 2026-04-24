@@ -1,0 +1,89 @@
+{
+  "id": "example-small",
+  "displayName": "Example Small Team",
+  "categories": [
+    { "id": "tech", "label": "Technical", "color": "#2a9d8f" },
+    { "id": "people", "label": "People", "color": "#e76f51" }
+  ],
+  "milestonePoints": [0, 2, 5, 10],
+  "pointsToLevels": [
+    { "minPoints": 0, "label": "Junior" },
+    { "minPoints": 8, "label": "Mid" },
+    { "minPoints": 20, "label": "Senior" }
+  ],
+  "titles": [
+    { "label": "Software Engineer", "minPoints": 0, "maxPoints": 19 },
+    { "label": "Senior Software Engineer", "minPoints": 20 }
+  ],
+  "tracks": [
+    {
+      "id": "CODE_QUALITY",
+      "displayName": "Code quality",
+      "categoryId": "tech",
+      "description": "Writes correct, maintainable code with good tests",
+      "milestones": [
+        {
+          "summary": "Writes readable code that works",
+          "signals": ["Uses meaningful names", "Writes unit tests for new code"],
+          "examples": ["Added tests for a bugfix", "Refactored a long function"]
+        },
+        {
+          "summary": "Reviews others' code and keeps the codebase healthy",
+          "signals": ["Leaves useful review comments", "Refactors opportunistically"],
+          "examples": ["Caught a race condition in review", "Introduced a shared helper"]
+        },
+        {
+          "summary": "Sets technical standards across the codebase",
+          "signals": ["Authors style guides", "Drives migrations"],
+          "examples": ["Migrated the project to TypeScript", "Established a testing strategy"]
+        }
+      ]
+    },
+    {
+      "id": "SYSTEM_DESIGN",
+      "displayName": "System design",
+      "categoryId": "tech",
+      "description": "Designs systems that are correct, scalable and easy to operate",
+      "milestones": [
+        {
+          "summary": "Understands existing systems well enough to extend them",
+          "signals": ["Reads docs before coding", "Asks good clarifying questions"],
+          "examples": ["Added a new endpoint to an existing service"]
+        },
+        {
+          "summary": "Proposes and implements sound designs for new features",
+          "signals": ["Writes short design docs", "Considers failure modes"],
+          "examples": ["Designed a caching strategy for a hot path"]
+        },
+        {
+          "summary": "Leads system-level design and architecture decisions",
+          "signals": ["Considers multi-team implications", "Drives consensus"],
+          "examples": ["Led a service extraction project"]
+        }
+      ]
+    },
+    {
+      "id": "MENTORSHIP",
+      "displayName": "Mentorship",
+      "categoryId": "people",
+      "description": "Supports peers and helps them grow",
+      "milestones": [
+        {
+          "summary": "Shares knowledge with peers",
+          "signals": ["Pair programs", "Writes informal docs"],
+          "examples": ["Ran an onboarding session"]
+        },
+        {
+          "summary": "Actively mentors individuals",
+          "signals": ["Provides actionable feedback", "Helps unblock others"],
+          "examples": ["Mentored a junior through a feature"]
+        },
+        {
+          "summary": "Shapes engineer growth across the team",
+          "signals": ["Defines growth plans", "Advocates for teammates"],
+          "examples": ["Ran a career framework workshop"]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,368 @@
+{
+  "id": "medium",
+  "displayName": "Medium (legacy)",
+  "categories": [
+    { "id": "A", "label": "Technical skills", "color": "#00abc2" },
+    { "id": "B", "label": "Execution", "color": "#428af6" },
+    { "id": "C", "label": "People", "color": "#e1439f" },
+    { "id": "D", "label": "Community", "color": "#e54552" }
+  ],
+  "milestonePoints": [0, 1, 3, 6, 12, 20],
+  "pointsToLevels": [
+    { "minPoints": 0, "label": "1.1" },
+    { "minPoints": 5, "label": "1.2" },
+    { "minPoints": 11, "label": "1.3" },
+    { "minPoints": 17, "label": "2.1" },
+    { "minPoints": 23, "label": "2.2" },
+    { "minPoints": 29, "label": "2.3" },
+    { "minPoints": 36, "label": "3.1" },
+    { "minPoints": 43, "label": "3.2" },
+    { "minPoints": 50, "label": "3.3" },
+    { "minPoints": 58, "label": "4.1" },
+    { "minPoints": 66, "label": "4.2" },
+    { "minPoints": 74, "label": "4.3" },
+    { "minPoints": 90, "label": "5.1" },
+    { "minPoints": 110, "label": "5.2" },
+    { "minPoints": 135, "label": "5.3" }
+  ],
+  "titles": [
+    { "label": "Engineer I", "minPoints": 0, "maxPoints": 16 },
+    { "label": "Engineer II", "minPoints": 17, "maxPoints": 35 },
+    { "label": "Senior Engineer", "minPoints": 36, "maxPoints": 57 },
+    { "label": "Group Lead", "minPoints": 36, "maxPoints": 57 },
+    { "label": "Staff Engineer", "minPoints": 58, "maxPoints": 89 },
+    { "label": "Senior Group Lead", "minPoints": 58, "maxPoints": 89 },
+    { "label": "Principal Engineer", "minPoints": 90 },
+    { "label": "Director of Engineering", "minPoints": 90 }
+  ],
+  "tracks": [
+    {
+      "id": "MOBILE",
+      "displayName": "Mobile",
+      "categoryId": "A",
+      "description": "Develops expertise in native mobile platform engineering, such as iOS or Android",
+      "milestones": [
+        {
+          "summary": "Works effectively within established iOS or Android architectures, following current best practices",
+          "signals": [
+            "Delivers features requiring simple local modifications",
+            "Adds simple actions that call server endpoints",
+            "Reuses existing components appropriately"
+          ],
+          "examples": [
+            "Added existing button to a different iOS surface",
+            "Add follow button for publications on Android",
+            "Fetched and displayed a new stream, using existing stream item styles"
+          ]
+        },
+        {
+          "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
+          "signals": [
+            "Defines new useful and appropriate proto-generated objects",
+            "Creates simple new activities on Android",
+            "Migrates code from old patterns to new patterns"
+          ],
+          "examples": [
+            "Upgraded SDWebImage to a new major version",
+            "Added support for rendering a new type of stream item",
+            "Prototyped a simple new feature quickly"
+          ]
+        },
+        {
+          "summary": "Designs major new features and demonstrates a nuanced understanding of mobile platform constraints",
+          "signals": [
+            "Implements complex features with a large product surface area",
+            "Works effectively with Android reactive programming framework",
+            "Adds support for new iOS features after a major iOS version upgrade"
+          ],
+          "examples": [
+            "Designed iOS caching strategy for offline reading",
+            "Built series reader on Android",
+            "Informed the team about recent best practice changes and deprecations"
+          ]
+        },
+        {
+          "summary": "Builds complex, reusable architectures that pioneer best practices and enable engineers to work more effectively",
+          "signals": [
+            "Pioneers architecture migration strategies that reduce programmer burden",
+            "Fixes subtle memory management issues",
+            "Implements interactive dismissals that bring delight"
+          ],
+          "examples": [
+            "Upgraded CocoaPods to a new major version",
+            "Designed architecture for fetching and rendering stream items",
+            "Migrated Android persistence layer to reactive programming"
+          ]
+        },
+        {
+          "summary": "Is an industry-leading expert in mobile engineering or sets strategic mobile direction for an eng team",
+          "signals": [
+            "Defines long-term goals and ensures active projects are in service of them",
+            "Designs and builds innovative, industry-leading UI interactions",
+            "Invents new techniques to responsibly stretch limits of the Android platform"
+          ],
+          "examples": [
+            "Defined and drove complete migration plan to Swift or Kotlin",
+            "Implemented Android recycler views before platform support existed",
+            "Pioneered application-level abstractions for multi-app environment"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "WEB_CLIENT",
+      "displayName": "Web client",
+      "categoryId": "A",
+      "description": "Develops expertise in web client technologies, such as HTML, CSS, and JavaScript",
+      "milestones": [
+        {
+          "summary": "Works effectively within established web client architectures, following current best practices",
+          "signals": [
+            "Makes minor modifications to existing screens",
+            "Fixes simple design quality issues",
+            "Uses CSS appropriately, following style guide"
+          ],
+          "examples": [
+            "Implemented sticky footer on the post page",
+            "Hooked up the action to dismiss a post from a stream",
+            "Built PaymentHistory screen using ResponseScreen"
+          ]
+        },
+        {
+          "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
+          "signals": [
+            "Makes sensible abstractions based on template and code patterns",
+            "Specs and builds interactive components independently",
+            "Prototypes simple new features quickly"
+          ],
+          "examples": [
+            "Built credit card input component",
+            "Created shared buttons template",
+            "Built modal system"
+          ]
+        },
+        {
+          "summary": "Designs major new features and demonstrates a nuanced understanding of browser constraints",
+          "signals": [
+            "Provides useful design feedback and suggests feasible alternatives",
+            "Performs systemic tasks to significantly minimise bundle size",
+            "Acts as a caretaker for all of web client code"
+          ],
+          "examples": [
+            "Designed font loading strategy for Medium",
+            "Researched utility of service workers for Medium",
+            "Designed and implemented ResponseScreen"
+          ]
+        },
+        {
+          "summary": "Builds complex, reusable architectures that pioneer best practices and enable engineers to work more effectively",
+          "signals": [
+            "Pioneers architecture migrations that reduce programmer burden",
+            "Implements complex UI transitions that bring delight",
+            "Makes architectural decisions that eliminate entire classes of bugs"
+          ],
+          "examples": [
+            "Designed Medium's post morpher and delta system",
+            "Implemented Medium's scrolling text over image blur",
+            "Designed and pioneered proto-based model storage"
+          ]
+        },
+        {
+          "summary": "Is an industry-leading expert in web client or sets strategic web client direction for an eng team",
+          "signals": [
+            "Invents new techniques to innovate and overcome browser constraints",
+            "Identifies and solved systemic problems with current architecture",
+            "Defines a long-term vision for web client and ensures projects are in service of it"
+          ],
+          "examples": [
+            "Invented CSS in JS",
+            "Defined and drove migration strategy to Lite",
+            "Implemented unidirectional data flow to completion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FOUNDATIONS",
+      "displayName": "Foundations",
+      "categoryId": "A",
+      "description": "Develops expertise in foundational systems (deployments, pipelines, databases, ML)",
+      "milestones": [
+        { "summary": "Placeholder milestone 1", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 2", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 3", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 4", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 5", "signals": [], "examples": [] }
+      ]
+    },
+    {
+      "id": "SERVERS",
+      "displayName": "Servers",
+      "categoryId": "A",
+      "description": "Develops expertise in server-side engineering",
+      "milestones": [
+        { "summary": "Placeholder milestone 1", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 2", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 3", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 4", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 5", "signals": [], "examples": [] }
+      ]
+    },
+    {
+      "id": "PROJECT_MANAGEMENT",
+      "displayName": "Project mgmt",
+      "categoryId": "B",
+      "description": "Delivers well-scoped programs that meet their goals on time",
+      "milestones": [
+        { "summary": "Placeholder milestone 1", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 2", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 3", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 4", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 5", "signals": [], "examples": [] }
+      ]
+    },
+    {
+      "id": "COMMUNICATION",
+      "displayName": "Communication",
+      "categoryId": "B",
+      "description": "Shares ideas effectively, clearly and respectfully",
+      "milestones": [
+        { "summary": "Placeholder milestone 1", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 2", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 3", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 4", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 5", "signals": [], "examples": [] }
+      ]
+    },
+    {
+      "id": "CRAFT",
+      "displayName": "Craft",
+      "categoryId": "B",
+      "description": "Builds reliable, bug-free software that is a pleasure to use",
+      "milestones": [
+        { "summary": "Placeholder milestone 1", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 2", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 3", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 4", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 5", "signals": [], "examples": [] }
+      ]
+    },
+    {
+      "id": "INITIATIVE",
+      "displayName": "Initiative",
+      "categoryId": "B",
+      "description": "Challenges the status quo and affects positive organizational change",
+      "milestones": [
+        { "summary": "Placeholder milestone 1", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 2", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 3", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 4", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 5", "signals": [], "examples": [] }
+      ]
+    },
+    {
+      "id": "CAREER_DEVELOPMENT",
+      "displayName": "Career dev",
+      "categoryId": "C",
+      "description": "Supports the career development of others",
+      "milestones": [
+        { "summary": "Placeholder milestone 1", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 2", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 3", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 4", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 5", "signals": [], "examples": [] }
+      ]
+    },
+    {
+      "id": "ORG_DESIGN",
+      "displayName": "Org design",
+      "categoryId": "C",
+      "description": "Shapes teams and processes for high-performance organizations",
+      "milestones": [
+        { "summary": "Placeholder milestone 1", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 2", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 3", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 4", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 5", "signals": [], "examples": [] }
+      ]
+    },
+    {
+      "id": "WELLBEING",
+      "displayName": "Wellbeing",
+      "categoryId": "C",
+      "description": "Fosters a team culture that supports emotional and physical wellbeing",
+      "milestones": [
+        { "summary": "Placeholder milestone 1", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 2", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 3", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 4", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 5", "signals": [], "examples": [] }
+      ]
+    },
+    {
+      "id": "ACCOMPLISHMENT",
+      "displayName": "Accomplishment",
+      "categoryId": "C",
+      "description": "Inspires others to higher achievement",
+      "milestones": [
+        { "summary": "Placeholder milestone 1", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 2", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 3", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 4", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 5", "signals": [], "examples": [] }
+      ]
+    },
+    {
+      "id": "MENTORSHIP",
+      "displayName": "Mentorship",
+      "categoryId": "D",
+      "description": "Provides guidance to engineers within Medium",
+      "milestones": [
+        { "summary": "Placeholder milestone 1", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 2", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 3", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 4", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 5", "signals": [], "examples": [] }
+      ]
+    },
+    {
+      "id": "EVANGELISM",
+      "displayName": "Evangelism",
+      "categoryId": "D",
+      "description": "Promotes Medium's engineering brand in the wider world",
+      "milestones": [
+        { "summary": "Placeholder milestone 1", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 2", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 3", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 4", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 5", "signals": [], "examples": [] }
+      ]
+    },
+    {
+      "id": "RECRUITING",
+      "displayName": "Recruiting",
+      "categoryId": "D",
+      "description": "Brings great engineers to the team",
+      "milestones": [
+        { "summary": "Placeholder milestone 1", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 2", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 3", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 4", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 5", "signals": [], "examples": [] }
+      ]
+    },
+    {
+      "id": "COMMUNITY",
+      "displayName": "Community",
+      "categoryId": "D",
+      "description": "Builds community across the team",
+      "milestones": [
+        { "summary": "Placeholder milestone 1", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 2", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 3", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 4", "signals": [], "examples": [] },
+        { "summary": "Placeholder milestone 5", "signals": [], "examples": [] }
+      ]
+    }
+  ]
+}
