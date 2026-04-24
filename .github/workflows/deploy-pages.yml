@@ -32,16 +32,14 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run tests
+      - name: Run unit tests (includes static/frameworks/*.json validation)
         run: npm test
 
       - name: Type check
         run: npm run check
 
-      - name: Build (with /snowflake base path)
-        env:
-          BASE_PATH: /snowflake
-        run: npm run build
+      - name: Build for Pages (BASE_PATH=/snowflake)
+        run: npm run build:pages
 
       - name: Copy index.html to 404.html for SPA fallback
         run: cp build/index.html build/404.html
