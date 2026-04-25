@@ -123,5 +123,13 @@ describe('scoring', () => {
       expect(currentLevel(gated, 12)).toBe('L3');
       expect(eligibleTitles(gated, 12)).toEqual(['Senior']);
     });
+
+    it('one outlier high track does not promote the engineer past their weakest level', () => {
+      // Cumulative-level intent: a single maxed track should not pull the
+      // overall level above what every other track has demonstrated.
+      // T1 maxed (3), T2 still at 1 → minTrack=1 stays in Mid band.
+      expect(currentLevel(gated, 12, { T1: 3, T2: 1 })).toBe('L2');
+      expect(eligibleTitles(gated, 12, { T1: 3, T2: 1 })).toEqual(['Mid']);
+    });
   });
 });

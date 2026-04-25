@@ -55,13 +55,13 @@
   ],
   "titles": [
     { "label": "Associate Software Engineer", "minPoints": 0, "maxPoints": 12 },
-    { "label": "Software Engineer", "minPoints": 13, "maxPoints": 24, "minMilestonePerTrack": 1 },
-    { "label": "Senior Software Engineer", "minPoints": 25, "maxPoints": 40, "minMilestonePerTrack": 2 },
-    { "label": "Lead Software Engineer", "minPoints": 41, "maxPoints": 60, "minMilestonePerTrack": 3 },
-    { "label": "Staff Software Engineer", "minPoints": 61, "maxPoints": 84, "minMilestonePerTrack": 4 },
-    { "label": "Senior Staff Software Engineer", "minPoints": 85, "maxPoints": 112, "minMilestonePerTrack": 5 },
-    { "label": "Principal Software Engineer", "minPoints": 113, "maxPoints": 140, "minMilestonePerTrack": 6 },
-    { "label": "Distinguished Software Engineer", "minPoints": 141, "minMilestonePerTrack": 7 }
+    { "label": "Software Engineer", "minPoints": 13, "maxPoints": 24, "minMilestonePerTrack": 2 },
+    { "label": "Senior Software Engineer", "minPoints": 25, "maxPoints": 40, "minMilestonePerTrack": 3 },
+    { "label": "Lead Software Engineer", "minPoints": 41, "maxPoints": 60, "minMilestonePerTrack": 4 },
+    { "label": "Staff Software Engineer", "minPoints": 61, "maxPoints": 84, "minMilestonePerTrack": 5 },
+    { "label": "Senior Staff Software Engineer", "minPoints": 85, "maxPoints": 112, "minMilestonePerTrack": 6 },
+    { "label": "Principal Software Engineer", "minPoints": 113, "maxPoints": 140, "minMilestonePerTrack": 7 },
+    { "label": "Distinguished Software Engineer", "minPoints": 141, "minMilestonePerTrack": 8 }
   ],
   "tracks": [
     {
