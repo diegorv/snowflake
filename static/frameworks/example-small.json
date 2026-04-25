@@ -21,6 +21,11 @@
       "id": "D",
       "label": "Communication & Leadership",
       "color": "#e54552"
+    },
+    {
+      "id": "E",
+      "label": "AI Maturity",
+      "color": "#8b5cf6"
     }
   ],
   "milestonePoints": [0, 1, 3, 6, 10, 15, 21, 28, 36],
@@ -524,6 +529,122 @@
             "Sought out by engineers across many teams for career and technical advice",
             "Mentored multiple staff and principal engineers through their careers",
             "Asked to participate in critical hiring and leveling decisions throughout the organization"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AI_MATURITY",
+      "displayName": "AI Maturity",
+      "categoryId": "E",
+      "description": "Adopts, integrates, and shapes the use of AI tooling and AI-powered systems across the engineering practice, from day-to-day assistance through industry-defining capabilities",
+      "milestones": [
+        {
+          "summary": "Uses AI tools as part of day-to-day workflow with light supervision (IC3 - Associate Software Engineer)",
+          "signals": [
+            "Uses code assistants such as Copilot, Cursor, or Claude Code in the IDE for routine tasks like scaffolding, boilerplate, and explanations",
+            "Asks AI for help understanding unfamiliar code, error messages, or library APIs and verifies the answer before acting on it",
+            "Follows the team's guidelines around what data, code, and credentials may be shared with AI assistants"
+          ],
+          "examples": [
+            "Used an AI assistant to scaffold unit tests for a new function and reviewed every assertion before merging",
+            "Asked Claude to explain a regex from the codebase and confirmed the explanation against the actual matches",
+            "Followed the team's policy when configuring an AI extension, opting out of model training on company code"
+          ]
+        },
+        {
+          "summary": "Applies AI thoughtfully across the SDLC and recognizes when output cannot be trusted (IC4 - Software Engineer)",
+          "signals": [
+            "Writes prompts that include the right context, constraints, and acceptance criteria rather than one-line questions",
+            "Validates AI-generated code with tests, type checks, and a careful read instead of merging on faith",
+            "Recognizes hallucinations, fabricated APIs, and out-of-date suggestions and corrects course quickly",
+            "Reaches for AI to debug, refactor, and explore alternatives, while still understanding the change before shipping"
+          ],
+          "examples": [
+            "Refactored a legacy module with AI assistance, expanding test coverage as part of the change",
+            "Caught a hallucinated function call in a PR suggested by an AI assistant and rewrote the diff",
+            "Used an AI agent to enumerate edge cases for a feature spec and turned them into test fixtures"
+          ]
+        },
+        {
+          "summary": "Designs AI-assisted workflows for the team and reasons about model trade-offs (IC5 - Senior Software Engineer)",
+          "signals": [
+            "Builds reusable prompts, slash commands, or repo-level agent configs that lift the whole team's leverage",
+            "Integrates AI into team workflows where it pays off (PR triage, doc generation, incident summaries) and skips it where it does not",
+            "Articulates trade-offs across models in terms of cost, latency, quality, and privacy, and picks the right tool for the job",
+            "Spots when AI is the wrong answer and pushes back instead of bolting it onto every problem"
+          ],
+          "examples": [
+            "Authored a CLAUDE.md or repo prompt template that became the team's default for new contributors",
+            "Ran a controlled bake-off between two models for a feature and documented the decision",
+            "Vetoed an AI-powered feature proposal after showing a deterministic rule covered the use case"
+          ]
+        },
+        {
+          "summary": "Owns AI capability for a domain end to end, including evals and cost-quality trade-offs (IC6 - Lead Software Engineer)",
+          "signals": [
+            "Designs and operates evaluation harnesses that catch regressions in prompts, models, and agent behaviour before they ship",
+            "Builds production-grade AI features (RAG, tool-using agents, structured-output pipelines) with observability, retries, and graceful degradation",
+            "Manages cost, latency, and quality at scale through caching, prompt compression, model routing, or fine-tuning where it pays off",
+            "Recognized as the go-to reviewer for AI-related designs and PRs across the squad"
+          ],
+          "examples": [
+            "Led the design of an agentic workflow that replaced a manual ops process and reduced cycle time meaningfully",
+            "Built an eval suite that blocked a model upgrade after catching a quality regression on a critical task",
+            "Cut LLM spend on a hot path by an order of magnitude through prompt caching and model routing without quality loss"
+          ]
+        },
+        {
+          "summary": "Sets AI engineering patterns across multiple teams and owns model and platform strategy (E4 - Staff Software Engineer)",
+          "signals": [
+            "Defines org-wide patterns for AI-assisted development and AI-powered features, including secure data handling, evaluation discipline, and rollout playbooks",
+            "Builds shared platform pieces — eval infra, prompt registries, agent runtimes, gateway and observability — used by every squad shipping AI",
+            "Owns the model upgrade and provider strategy, including build-vs-buy calls and migration plans across model families",
+            "Anticipates platform implications of new AI capabilities (latency, cost curves, data residency, prompt injection) before they bite production"
+          ],
+          "examples": [
+            "Authored an RFC adopted across the business unit on safe agent design, including tool sandboxing and human-in-the-loop checkpoints",
+            "Drove a coordinated migration from one model family to another with a regression-tested rollout across five squads",
+            "Stood up a shared LLM gateway with logging, redaction, and cost attribution that became the only sanctioned path to providers"
+          ]
+        },
+        {
+          "summary": "Connects AI capability to multi-year business strategy and emergent risk (E5 - Senior Staff Software Engineer)",
+          "signals": [
+            "Plays a key role in shaping a multi-year AI strategy spanning product, platform, data, and security",
+            "Anticipates broad shifts — context windows, agent autonomy, pricing models, regulation — and keeps the org ahead of the curve",
+            "Identifies emergent risks early (data leakage, prompt injection, model collapse, attribution disputes) and leads mitigation work",
+            "Influences hiring, training, and ways-of-working so the entire engineering org levels up its AI fluency"
+          ],
+          "examples": [
+            "Co-authored a three-year AI strategy adopted by senior leadership, with concrete platform and product bets",
+            "Identified a class of prompt-injection risk three quarters ahead of customer impact and led the cross-team mitigation",
+            "Designed and rolled out an AI-fluency curriculum that measurably shifted productivity across the engineering org"
+          ]
+        },
+        {
+          "summary": "Creates AI engineering patterns whose value extends beyond the company (E6 - Principal Software Engineer)",
+          "signals": [
+            "Creates abstractions, frameworks, or evaluations whose usefulness extends to other developers and other companies in the industry",
+            "Holds enough breadth to come up to speed and contribute meaningfully across any AI surface — assistants, agents, RAG, fine-tuning, evals, safety",
+            "Shapes industry conversations on AI engineering practice through writing, talks, or reference implementations"
+          ],
+          "examples": [
+            "Open-sourced an evaluation framework or agent runtime adopted by teams outside the company",
+            "Authored a reference architecture for production AI systems referenced by peers in the industry",
+            "Joined a new AI sub-discipline (e.g. agent reliability, evals, retrieval) and was producing high-leverage work within a quarter"
+          ]
+        },
+        {
+          "summary": "Recognized industry-wide as a leading voice in AI engineering (E7 - Distinguished Software Engineer)",
+          "signals": [
+            "Easily recognizable as one of the world's leading practitioners in AI engineering or in a specific AI sub-discipline",
+            "Sets technical direction for AI engineering practice that other companies and engineers explicitly follow"
+          ],
+          "examples": [
+            "Originated a widely adopted AI engineering technique, paper, or open-source project",
+            "Recognized externally with awards, keynotes, or fellowship-level honors specifically for work on AI systems",
+            "Sets technical direction on AI that other companies and engineers explicitly follow"
           ]
         }
       ]
