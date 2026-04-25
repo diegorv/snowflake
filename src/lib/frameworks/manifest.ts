@@ -16,12 +16,18 @@ const ManifestSchema = z.array(
 
 export async function loadManifest(
   fetchImpl: typeof fetch = fetch,
-  url = '/frameworks/index.json'
+  url = '/frameworks/index.json',
+  version?: string
 ): Promise<FrameworkManifestEntry[]> {
-  const res = await fetchImpl(url);
+  const res = await fetchImpl(withVersion(url, version));
   if (!res.ok) {
     throw new Error(`Failed to fetch framework manifest: ${res.status}`);
   }
   const json = await res.json();
   return ManifestSchema.parse(json);
+}
+
+export function withVersion(url: string, version?: string): string {
+  if (!version) return url;
+  return `${url}${url.includes('?') ? '&' : '?'}v=${encodeURIComponent(version)}`;
 }

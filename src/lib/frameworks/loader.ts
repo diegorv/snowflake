@@ -1,16 +1,17 @@
 import { parseFramework } from '../domain/frameworkSchema.js';
 import type { Framework } from '../domain/types.js';
-import type { FrameworkManifestEntry } from './manifest.js';
+import { withVersion, type FrameworkManifestEntry } from './manifest.js';
 import { getFramework, registerFramework } from './registry.js';
 
 export async function loadFramework(
   entry: FrameworkManifestEntry,
-  fetchImpl: typeof fetch = fetch
+  fetchImpl: typeof fetch = fetch,
+  version?: string
 ): Promise<Framework> {
   const cached = getFramework(entry.id);
   if (cached) return cached;
 
-  const res = await fetchImpl(entry.path);
+  const res = await fetchImpl(withVersion(entry.path, version));
   if (!res.ok) {
     throw new Error(`Failed to fetch framework "${entry.id}" from ${entry.path}: ${res.status}`);
   }

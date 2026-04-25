@@ -45,6 +45,11 @@ jobs:
         run: npm run check
 
       - name: Build for Pages (BASE_PATH=/snowflake)
+        env:
+          # Cache-bust framework JSON fetches per deploy. The loader appends
+          # `?v=$VITE_BUILD_VERSION` so a new commit forces browsers/CDNs to
+          # refetch the JSON instead of serving GitHub Pages' 10-minute cache.
+          VITE_BUILD_VERSION: ${{ github.sha }}
         run: npm run build:pages
 
       - name: Copy index.html to 404.html for SPA fallback

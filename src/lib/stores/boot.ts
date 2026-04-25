@@ -13,6 +13,12 @@ export interface BootOptions {
   base?: string;
   /** Preloaded initial hash (falls back to window.location.hash). */
   initialHash?: string;
+  /**
+   * Cache-busting token appended to framework JSON fetches as `?v=<version>`.
+   * Defaults to `import.meta.env.VITE_BUILD_VERSION` (set at build time, e.g.
+   * to `${{ github.sha }}` in CI). When unset, no query string is added.
+   */
+  version?: string;
 }
 
 export interface BootResult {
@@ -48,8 +54,13 @@ function prefixManifestPaths(
 export async function bootApp(options: BootOptions = {}): Promise<BootResult> {
   const fetchImpl = options.fetch ?? fetch;
   const base = options.base ?? '';
+  const version = options.version ?? import.meta.env.VITE_BUILD_VERSION;
 
-  const rawManifest = await loadManifest(fetchImpl, `${base}/frameworks/index.json`);
+  const rawManifest = await loadManifest(
+    fetchImpl,
+    `${base}/frameworks/index.json`,
+    version
+  );
   if (rawManifest.length === 0) {
     throw new Error(
       'No frameworks configured. Add at least one entry to static/frameworks/index.json.'
@@ -60,7 +71,7 @@ export async function bootApp(options: BootOptions = {}): Promise<BootResult> {
 
   const results = await Promise.all(
     manifest.map((entry) =>
-      loadFramework(entry, fetchImpl)
+      loadFramework(entry, fetchImpl, version)
         .then(() => ({ id: entry.id, ok: true as const }))
         .catch((err) => {
           console.warn(`Failed to preload framework "${entry.id}":`, err);
