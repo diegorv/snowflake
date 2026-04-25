@@ -41,7 +41,7 @@ export async function selectFramework(
   focusedTrackId.set(framework.tracks[0].id);
 
   const total = totalPoints(framework, sanitized);
-  const eligible = eligibleTitles(framework, total);
+  const eligible = eligibleTitles(framework, total, sanitized);
   const currentTitle = get(title);
   if (!eligible.includes(currentTitle)) {
     title.set(eligible[0] ?? '');

@@ -84,4 +84,44 @@ describe('scoring', () => {
   it('maxAchievablePoints === track count * top milestonePoint', () => {
     expect(maxAchievablePoints(f)).toBe(2 * 10);
   });
+
+  describe('minMilestonePerTrack balance gate', () => {
+    const gated = buildFramework({
+      titles: [
+        { label: 'Junior', minPoints: 0, maxPoints: 4 },
+        { label: 'Mid', minPoints: 5, maxPoints: 11, minMilestonePerTrack: 1 },
+        { label: 'Senior', minPoints: 12, minMilestonePerTrack: 2 }
+      ]
+    });
+
+    it('caps level when one track is at zero (single-axis maxing)', () => {
+      // Total 10 (T1=3 maxes points), but T2=0 → blocked at the Mid band.
+      expect(currentLevel(gated, 10, { T1: 3, T2: 0 })).toBe('L1');
+    });
+
+    it('unlocks the Mid band once every track has at least milestone 1', () => {
+      // Total 5 with T1=1, T2=2 → Mid band unlocked, level L2.
+      expect(currentLevel(gated, 7, { T1: 1, T2: 2 })).toBe('L2');
+    });
+
+    it('Senior band requires milestone 2 on every track', () => {
+      // T1=3, T2=1 → 12 pts but minTrack=1 < 2, capped at top of Mid band.
+      expect(currentLevel(gated, 12, { T1: 3, T2: 1 })).toBe('L2');
+      // T1=2, T2=2 → 10 pts, minTrack=2, but only 10 pts so still L2.
+      expect(currentLevel(gated, 10, { T1: 2, T2: 2 })).toBe('L2');
+      // T1=3, T2=2 → 15 pts and minTrack=2 → unlocks Senior.
+      expect(currentLevel(gated, 15, { T1: 3, T2: 2 })).toBe('L3');
+    });
+
+    it('eligibleTitles filters out bands the user cannot balance into', () => {
+      expect(eligibleTitles(gated, 12, { T1: 3, T2: 0 })).toEqual(['Junior']);
+      expect(eligibleTitles(gated, 12, { T1: 3, T2: 1 })).toEqual(['Mid']);
+      expect(eligibleTitles(gated, 15, { T1: 3, T2: 2 })).toEqual(['Senior']);
+    });
+
+    it('falls back to legacy points-only behaviour when milestones omitted', () => {
+      expect(currentLevel(gated, 12)).toBe('L3');
+      expect(eligibleTitles(gated, 12)).toEqual(['Senior']);
+    });
+  });
 });

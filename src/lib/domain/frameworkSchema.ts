@@ -51,7 +51,12 @@ const LevelThresholdSchema = z.object({
 const TitleSchema = z.object({
   label: z.string().min(1).max(120),
   minPoints: z.number().int().nonnegative(),
-  maxPoints: z.number().int().nonnegative().optional()
+  maxPoints: z.number().int().nonnegative().optional(),
+  // Optional balance gate: the title (and every level falling inside its
+  // [minPoints, maxPoints] band) is only reachable when every track is at this
+  // milestone level or above. Lets a framework prevent "single-axis seniority"
+  // where one maxed track alone promotes the user past the band.
+  minMilestonePerTrack: z.number().int().nonnegative().optional()
 });
 
 export const FrameworkSchema = z.object({

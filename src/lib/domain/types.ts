@@ -27,6 +27,7 @@ export interface TitleDef {
   label: string;
   minPoints: number;
   maxPoints?: number;
+  minMilestonePerTrack?: number;
 }
 
 export interface Framework {

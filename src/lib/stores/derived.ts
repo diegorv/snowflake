@@ -22,8 +22,9 @@ export const categoryPointsStore = derived(
 );
 
 export const currentLevelStore = derived(
-  [currentFramework, totalPointsStore],
-  ([$framework, $total]) => ($framework ? currentLevel($framework, $total) : '')
+  [currentFramework, totalPointsStore, milestones],
+  ([$framework, $total, $milestones]) =>
+    $framework ? currentLevel($framework, $total, $milestones) : ''
 );
 
 export const pointsToNextLevelStore = derived(
@@ -32,8 +33,9 @@ export const pointsToNextLevelStore = derived(
 );
 
 export const eligibleTitlesStore = derived(
-  [currentFramework, totalPointsStore],
-  ([$framework, $total]) => ($framework ? eligibleTitles($framework, $total) : [])
+  [currentFramework, totalPointsStore, milestones],
+  ([$framework, $total, $milestones]) =>
+    $framework ? eligibleTitles($framework, $total, $milestones) : []
 );
 
 export const maxPointsStore = derived(currentFramework, ($framework) =>

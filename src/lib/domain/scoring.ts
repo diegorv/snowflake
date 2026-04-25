@@ -37,14 +37,51 @@ export function categoryPoints(
   }));
 }
 
-export function currentLevel(framework: Framework, total: number): string {
+function minTrackMilestone(
+  framework: Framework,
+  milestones: MilestoneMap | undefined
+): number {
+  // No milestone map → no balance constraint can be evaluated, so callers
+  // get the legacy points-only behaviour.
+  if (!milestones) return Number.POSITIVE_INFINITY;
+  let min = Number.POSITIVE_INFINITY;
+  for (const track of framework.tracks) {
+    const m = milestones[track.id] ?? 0;
+    if (m < min) min = m;
+  }
+  return min;
+}
+
+function titleForLevel(framework: Framework, levelMinPoints: number) {
+  return framework.titles.find(
+    (t) =>
+      levelMinPoints >= t.minPoints &&
+      (t.maxPoints === undefined || levelMinPoints <= t.maxPoints)
+  );
+}
+
+function isLevelUnlocked(
+  framework: Framework,
+  levelMinPoints: number,
+  minTrack: number
+): boolean {
+  if (minTrack === Number.POSITIVE_INFINITY) return true;
+  const title = titleForLevel(framework, levelMinPoints);
+  if (!title?.minMilestonePerTrack) return true;
+  return minTrack >= title.minMilestonePerTrack;
+}
+
+export function currentLevel(
+  framework: Framework,
+  total: number,
+  milestones?: MilestoneMap
+): string {
+  const minTrack = minTrackMilestone(framework, milestones);
   let label = framework.pointsToLevels[0].label;
   for (const entry of framework.pointsToLevels) {
-    if (total >= entry.minPoints) {
-      label = entry.label;
-    } else {
-      break;
-    }
+    if (total < entry.minPoints) break;
+    if (!isLevelUnlocked(framework, entry.minPoints, minTrack)) break;
+    label = entry.label;
   }
   return label;
 }
@@ -61,14 +98,29 @@ export function pointsToNextLevel(
   return 'N/A';
 }
 
-export function eligibleTitles(framework: Framework, total: number): string[] {
-  return framework.titles
-    .filter(
-      (t) =>
-        total >= t.minPoints &&
-        (t.maxPoints === undefined || total <= t.maxPoints)
-    )
-    .map((t) => t.label);
+export function eligibleTitles(
+  framework: Framework,
+  total: number,
+  milestones?: MilestoneMap
+): string[] {
+  const minTrack = minTrackMilestone(framework, milestones);
+  // Walk titles in order. The user is "at" the highest title whose minPoints
+  // is reached AND whose balance gate (if any) passes. If their total exceeds
+  // a title's maxPoints but the next title is blocked, they stay at the last
+  // reachable title rather than falling off the chart.
+  let result: string[] = [];
+  for (const t of framework.titles) {
+    if (total < t.minPoints) break;
+    if (
+      minTrack !== Number.POSITIVE_INFINITY &&
+      t.minMilestonePerTrack !== undefined &&
+      minTrack < t.minMilestonePerTrack
+    ) {
+      break;
+    }
+    result = [t.label];
+  }
+  return result;
 }
 
 export function maxAchievablePoints(framework: Framework): number {
