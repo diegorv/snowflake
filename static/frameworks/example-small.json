@@ -190,6 +190,7 @@
         {
           "summary": "Builds productivity skills and ships well-defined tasks all the way to production (IC3 - Associate Software Engineer)",
           "signals": [
+            "Typical scope: Low-ambiguity tasks with Low autonomy — manager or more tenured engineers lead 50%+ of feature decisions",
             "Develops productivity skills by learning the team's tooling, including source control, editors, the continuous deployment pipeline, logging, monitoring, and testing best practices",
             "Takes well-defined tasks and delivers them all the way through to production, collaborating with teammates where needed",
             "Holds practical, hands-on knowledge of how the team ships, including how services deploy, how the app is released, how to change a rollout, and how to read monitoring dashboards",
@@ -204,6 +205,7 @@
         {
           "summary": "Makes steady progress on tasks, communicates assumptions early, and unblocks themselves and the team (IC4 - Software Engineer)",
           "signals": [
+            "Typical scope: Low-ambiguity work executed independently and Medium-ambiguity work with guidance — manager leads 30-50% of feature decisions",
             "Makes steady, predictable progress and recognizes when to ask for help and when to offer it to keep the team unblocked",
             "Understands the team's domain model and the business context surrounding it",
             "Sidesteps bikeshedding and focuses energy on the parts of a problem with the most impact or risk",
@@ -219,6 +221,7 @@
         {
           "summary": "De-risks design choices empirically, ships in well-staged milestones, and keeps the team's systems healthy (IC5 - Senior Software Engineer)",
           "signals": [
+            "Typical scope: Low-to-Medium ambiguity executed with High autonomy — manager leads under 30% of feature decisions",
             "Backs significant design or architectural choices with empirical evidence such as proofs of concept, tests, and external research, given a clear product motivation",
             "Drives small-to-medium features from technical design through one hundred percent rollout, including bug fixing and post-launch improvements",
             "Breaks work into well-defined milestones rather than producing a single monolithic deliverable",
@@ -235,6 +238,7 @@
         {
           "summary": "Reduces complexity, manages technical debt deliberately, and rolls out sensitive changes safely (IC6 - Lead Software Engineer)",
           "signals": [
+            "Typical scope: Medium ambiguity driven from definition through rollout with High autonomy — manager provides context rather than direction",
             "Consistently reduces the complexity of projects, systems, and processes to get more done with less work, breaking up deliverables for early feedback and incremental business value",
             "Spots accumulating technical debt and proactively influences the team to pay it down before it grows",
             "Plans and rolls out changes through to completion with controlled, low impact on customers and downstream systems, partnering with PM, BA, and other roles as needed"
@@ -248,6 +252,7 @@
         {
           "summary": "Plans and executes highly sensitive cross-system changes and creates leadership opportunities for others (E4 - Staff Software Engineer)",
           "signals": [
+            "Typical scope: High ambiguity with Very High autonomy — defines problem, plan, and trade-offs with effectively no day-to-day managerial direction",
             "Plans and rolls out highly sensitive system changes through to completion with controlled, low impact on customers and client systems, partnering with PM, BA, and other roles",
             "Proactively identifies and starts projects to reshape architecture when preconditions have changed and the existing design no longer fits, extracting and documenting platforms as needed",
             "Spots opportunities for engineers to take leadership on increasingly larger or more sensitive projects, partnering with managers to set them up for success"
@@ -261,6 +266,7 @@
         {
           "summary": "Determines the most important technical risks and opportunities and drives waves of change to completion (E5 - Senior Staff Software Engineer)",
           "signals": [
+            "Typical scope: High-to-Very-High ambiguity with Very High autonomy — frames problems and trade-offs spanning multiple business units",
             "Determines the organization's most important technical risks and opportunities and executes against them efficiently",
             "Drives waves of technical change all the way through rollout, owning execution and not just vision",
             "Builds architecture that keeps many futures open without requiring certainty about which one will arrive",
@@ -275,6 +281,7 @@
         {
           "summary": "Produces a sustained stream of valuable software and balances community priorities with company outcomes (E6 - Principal Software Engineer)",
           "signals": [
+            "Typical scope: Very High ambiguity — frames problems no one else has framed, requiring deep customer, market, or technical-strategy context",
             "Prolific producer of valuable open- and closed-source software",
             "Balances broader community priorities against the company's success"
           ],
@@ -287,6 +294,7 @@
         {
           "summary": "Holds broad visibility outside the company through invention, implementation, writing, and speaking (E7 - Distinguished Software Engineer)",
           "signals": [
+            "Typical scope: industry-defining ambiguity — problems often have no precedent or playbook",
             "Holds broad visibility outside the company via invention, implementation, writing, or speaking"
           ],
           "examples": [
@@ -306,6 +314,7 @@
         {
           "summary": "Focuses on growing as an engineer and on living the team's core values (IC3 - Associate Software Engineer)",
           "signals": [
+            "Typical scope: Low complexity — one team, one business line, services within the squad",
             "Focuses energy on growing as an engineer, quickly absorbing existing tools, resources, and processes",
             "Embodies the team's core values, putting effort into understanding and living them"
           ],
@@ -318,6 +327,7 @@
         {
           "summary": "Contributes to technical design and connects individual work to wider business impact (IC4 - Software Engineer)",
           "signals": [
+            "Typical scope: Low-to-Medium complexity — single team or 2-3 teams within one business line; services starting to be consumed by adjacent teams",
             "Actively contributes to the technical design of features",
             "Owns features end to end with growing complexity, from inception through production into post-launch monitoring",
             "Reasons through and articulates well-considered design trade-offs in their area",
@@ -333,6 +343,7 @@
         {
           "summary": "Partners cross-functionally, drives requirements that include all parties, and improves core platforms or critical logic (IC5 - Senior Software Engineer)",
           "signals": [
+            "Typical scope: Medium complexity — 2-3 teams within one business line (or one team across multiple lines); owns services consumed by 2+ adjacent teams",
             "Partners with analysts, data scientists, designers, product peers, and other specialists to shape requirements that account for everyone's needs",
             "Makes material improvements to core platform code or to critical business logic for the organization",
             "Lets customer empathy guide decisions and avoids building things that do not solve real problems",
@@ -349,6 +360,7 @@
         {
           "summary": "Recognized as a prolific contributor; articulates trade-offs and creates sweeping system improvements (IC6 - Lead Software Engineer)",
           "signals": [
+            "Typical scope: High complexity — multiple business lines and 2-3 teams in flight; owns services used across business-line boundaries",
             "Recognized by business-unit technical leadership as a prolific contributor to core and side projects",
             "Articulates the trade-offs between technical, analytical, and product needs, including efficiency versus thoroughness and taking on debt versus paying it down",
             "Has a track record of sweeping improvements in stability, performance, clarity, and scalability across major systems",
@@ -363,6 +375,7 @@
         {
           "summary": "Operates as an engineering stakeholder at the BU level, multiplies team effectiveness, and shifts the organization's technical trajectory (E4 - Staff Software Engineer)",
           "signals": [
+            "Typical scope: High-to-Very-High complexity — 3+ teams coordinating across multiple business lines; owns services consumed by many teams and 2+ business units",
             "Acts as an engineering stakeholder at the business-unit level and consistently influences decision-making across multiple teams, with awareness of how those teams interact with other parts of the business",
             "Multiplies others' effectiveness by aligning teams on a platform vision and creating building blocks that unlock faster, better future deliveries",
             "Has visibly shifted the organization's overall technical trajectory"
@@ -376,6 +389,7 @@
         {
           "summary": "Drives multi-year strategy across critical business areas and serves as a role model and force multiplier for the org (E5 - Senior Staff Software Engineer)",
           "signals": [
+            "Typical scope: Very High complexity — initiatives span the engineering organization and 2+ business units",
             "Plays a key role in shaping a multi-year technology strategy for entire critical areas of the business spanning multiple systems and teams",
             "Decisions made directly affect the long-term success or failure of the organization",
             "Seen as a role model and mentor by many technical members of the team",
@@ -390,6 +404,7 @@
         {
           "summary": "Directly and quantifiably moves the business and contributes substantially to influential open-source projects (E6 - Principal Software Engineer)",
           "signals": [
+            "Typical scope: company-wide breadth — outcomes touch the whole engineering organization and reach the external community",
             "Directly and quantifiably impacts the business as a whole",
             "Consistently produces significant contributions to influential open-source projects that shape the broader software industry"
           ],
@@ -402,6 +417,7 @@
         {
           "summary": "Influences technical direction beyond the company and shapes its global reputation (E7 - Distinguished Software Engineer)",
           "signals": [
+            "Typical scope: industry-wide — outcomes shape problems beyond the company",
             "Influences technical direction beyond the organization itself",
             "Plays a critical role in establishing the organization's reputation as one of the well-known global technology companies"
           ],
